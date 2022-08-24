@@ -6,16 +6,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          sida gjord av Linus J
-        </p>
+        <h3>
+          Sida gjord av Linus J
+        </h3>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Skapad med create ract app
+          Skapad med create react app
         </a>
       </header>
     </div>
