@@ -13,9 +13,18 @@ export default function Home() {
             <h1>header</h1>
         </header>
         <main>
-            <div className='container'>
+            <div id='my-work' className='container'>
                 <h1>LINUS</h1>
+                <div className='item'>LINUS</div>
+                <div className='item'>LINUS</div>
+                <div className='item'>LINUS</div>
+                <div className='item'>LINUS</div>
+                <div className='item'>LINUS</div>
             </div>
+            <div id='skills' className='container'>
+                <p>test</p>
+            </div>
+            
         </main>
         <footer className='footer'>
             <div className='socials'>

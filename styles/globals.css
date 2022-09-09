@@ -28,8 +28,12 @@ a {
   min-height: 75vh;
   background-color: grey;
   border: 5px solid white;
-  font-size:150px;
-  
+  margin: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
 }
 
 .footer {
