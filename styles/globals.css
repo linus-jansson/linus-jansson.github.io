@@ -26,11 +26,10 @@ a {
   justify-content: center;
   align-items: center;
   min-height: 75vh;
-  background-color: red;
+  background-color: grey;
   border: 5px solid white;
-  font-family: 'snap ITC';
   font-size:150px;
-  color: blue;
+  
 }
 
 .footer {
