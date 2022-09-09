@@ -1,7 +1,12 @@
-html,
-body {
+html, body {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -15,12 +20,41 @@ a {
   box-sizing: border-box;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  background-color: red;
+  border: 5px solid white;
+  font-family: 'snap ITC';
+  font-size:150px;
+  color: blue;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: auto;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.copyright {
+  font-size: 20px;
+}
+
 @media (prefers-color-scheme: dark) {
+  /* https://colorhunt.co/palette/2c3333395b64a5c9cae7f6f2 */
   html {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: #E7F6F2;
+    background: #282c34;
   }
 }

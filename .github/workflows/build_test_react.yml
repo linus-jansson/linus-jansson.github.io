@@ -1,57 +1,30 @@
-name: Build and Test React Application
+name: Deployment
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [main]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build_and_test:
+  build:
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        node-version: [14.x, 15.x, 16.x]
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-          
-      - name: Install dependencies
+          node-version: '14.x'
+
+      - name: Installing my packages
         run: npm ci
 
-      - name: Build
-        run: npm run build --if-present
+      - name: Build my App
+        run: npm run build && npm run export && touch ./out/.nojekyll
 
-      - name: Test
-        run: npm run test
-
-      - uses: actions/upload-artifact@v3
+      - name: Deploy 🚀
+        uses: linus-jansson/github-pages-deploy-action@v4
         with:
-          name: build-dir
-          path: build/ # or path/to/artifact
-  
-  deploy:
-      permissions:
-        contents: write
-      needs: [ build_and_test ] # Wait before running "deploy" until "validate_code" and "run_tests" are done
-      runs-on: ubuntu-latest
-
-      steps:
-        - uses: actions/checkout@v3
-        - uses: actions/download-artifact@master
-          with:
-            name: build-dir
-            path: build/ # or path/to/artifact
-        - name: Deploy website 🚀
-          uses: linus-jansson/github-pages-deploy-action@v4
-          with:
-            folder: build/ # The folder that should be used in the deployment
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: out # The folder the action should deploy.
