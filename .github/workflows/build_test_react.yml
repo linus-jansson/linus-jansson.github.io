@@ -10,24 +10,48 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build_test:
-    # The type of runner that the job will run on
+  build_and_test:
     runs-on: ubuntu-latest
-
+    
     strategy:
       matrix:
         node-version: [14.x, 15.x, 16.x]
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm ci, build and test
-        run: |
-          npm ci
-          npm run build --if-present
-          npm test  
+          
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build --if-present
+
+      - name: Test
+        run: npm run test
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build-dir
+          path: build/ # or path/to/artifact
+  
+  deploy:
+      permissions:
+        contents: write
+      needs: [ build_and_test ] # Wait before running "deploy" until "validate_code" and "run_tests" are done
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v3
+        - uses: actions/download-artifact@master
+          with:
+            name: build-dir
+            path: build/ # or path/to/artifact
+        - name: Deploy website 🚀
+          uses: linus-jansson/github-pages-deploy-action@v4
+          with:
+            folder: build/ # The folder that should be used in the deployment
