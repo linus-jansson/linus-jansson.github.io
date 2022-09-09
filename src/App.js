@@ -1,5 +1,13 @@
-import './App.css';
+import './assets/css/style.css';
 import React from 'react';
+
+
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Work from './components/Work'
+import Skills from './components/Skills'
+import Contact from './components/Contact'
+
 
 
 class App extends React.Component {
@@ -19,27 +27,11 @@ class App extends React.Component {
   {
     return (
       <div className="App">
-        <header className="App-header">
-          <h3>Made By Linus Jansson</h3>
-          <p>Want to get in contact with me?</p>
-          <div onMouseOver={() => this.setState({isHovered: true})} onMouseOut={() => this.setState({isHovered: false}) } >
-            { this.state.isHovered ?
-                <a className="App-link" 
-                href="mailto:contact@limpan.dev" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                    contact@limpan.dev
-                </a> :
-                <a className="App-link" 
-                    href="mailto:contact@limpan.dev" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    Mail me!
-                </a>
-            }
-            
-          </div>
-        </header>
+        <Header />
+        <Skills/>
+        <Work/>
+        <Contact/>
+        <Footer/>
       </div>
     );
   }
