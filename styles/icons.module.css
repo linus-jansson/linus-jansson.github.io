@@ -8,10 +8,11 @@
     position: absolute;
 
     background-image: url('/github.svg');
-    background-position: center; /* Center the image */
+    background-position: right; /* Center the image */
     background-size: contain;
     background-repeat: no-repeat;
 
-    width: calc(64px / 1.5);
-    height: calc(64px / 1.5);
+    width: 32px;
+    height: 32px;
+
 }
