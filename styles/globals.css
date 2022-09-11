@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  padding: 10px;
+}
+
+
+.copyright {
+  font-size: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* https://colorhunt.co/palette/2c3333395b64a5c9cae7f6f2 */
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: #E7F6F2;
+    background: #0B0E14;
+  }
+}
