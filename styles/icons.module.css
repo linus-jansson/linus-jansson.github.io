@@ -1,0 +1,17 @@
+.icon_link {
+    background-image: url('/link.svg');
+    width: 32px;
+    height: 32px;
+}
+
+.icon_github {
+    position: absolute;
+
+    background-image: url('/github.svg');
+    background-position: center; /* Center the image */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: calc(64px / 1.5);
+    height: calc(64px / 1.5);
+}
