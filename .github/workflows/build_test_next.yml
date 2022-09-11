@@ -22,7 +22,7 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build and next export
         run: npm run build
 
@@ -41,7 +41,7 @@ jobs:
       - uses: actions/download-artifact@master
         with:
           name: build-dir
-          path: build/ # or path/to/artifact
+          path: out/ # or path/to/artifact
       - name: Deploy website 🚀
         uses: linus-jansson/github-pages-deploy-action@v4
         with:
