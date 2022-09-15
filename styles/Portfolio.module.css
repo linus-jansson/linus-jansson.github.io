@@ -1,0 +1,23 @@
+#portfolio {
+    text-align: center;
+}
+
+/* https://stackoverflow.com/questions/29546550/flexbox-4-items-per-row */
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* margin: 10px; */
+    /* height: 500px; */
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 599px) {
+
+    .cards {
+
+        flex-direction: column;
+        flex-flow: column wrap
+    }
+}

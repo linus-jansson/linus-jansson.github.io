@@ -45,6 +45,11 @@ export default function a() {
                                     <a target="_blank" className={icons.icon_github}></a>
                                 </Link>
                             </li>
+                            {/* <li>
+                                <Link href="https://linkedin.com/in/linus-jansson-94715924a">
+                                    <a target="_blank" className={icons.icon_linkedin}></a>
+                                </Link>
+                            </li> */}
                         </ul>
                         
 
