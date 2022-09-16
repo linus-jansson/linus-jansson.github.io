@@ -14,7 +14,7 @@ export default function a() {
             <Head>
                 <title>Hey! I&apos;m linus!</title>
             </Head>
-            <Hamburger/>
+            {/* <Hamburger/> */}
             <div className={styles.container}>
                 <div key='pfp' className={styles.profile_picture}>
                     <Image
