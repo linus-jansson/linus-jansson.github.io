@@ -22,8 +22,12 @@ export default function p() {
             </Head>
             <Hamburger/>
 
-            <div id={styles.portfolio}>
-                <h1>Here is my work!</h1>
+            <div className={styles.portfolio}>
+                <div className='title'>
+                    <h1>Here is my work!</h1>
+                </div>
+                
+
                 <div className={styles.cards}>
                     {cards}
                 </div>
