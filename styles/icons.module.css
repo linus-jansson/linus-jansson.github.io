@@ -4,6 +4,7 @@
     height: 32px;
 }
 
+
 .icon_github {
     position: absolute;
 
@@ -14,5 +15,23 @@
 
     width: 32px;
     height: 32px;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icon_linkedin {
+    position: absolute;
+
+    background-image: url('/linkedin.svg');
+    background-position: right; /* Center the image */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 32px;
+    height: 32px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
 
 }

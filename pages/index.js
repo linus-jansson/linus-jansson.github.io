@@ -5,12 +5,16 @@ import Image from 'next/image'
 import styles from '../styles/Index.module.css'
 import icons from '../styles/icons.module.css'
 
+import Hamburger from '../components/Hamburger'
+
+
 export default function a() {
     return (
         <div className={styles.main}>
             <Head>
                 <title>Hey! I&apos;m linus!</title>
             </Head>
+            {/* <Hamburger/> */}
             <div className={styles.container}>
                 <div key='pfp' className={styles.profile_picture}>
                     <Image
@@ -41,6 +45,11 @@ export default function a() {
                                     <a target="_blank" className={icons.icon_github}></a>
                                 </Link>
                             </li>
+                            {/* <li>
+                                <Link href="https://linkedin.com/in/linus-jansson-94715924a">
+                                    <a target="_blank" className={icons.icon_linkedin}></a>
+                                </Link>
+                            </li> */}
                         </ul>
                         
 
