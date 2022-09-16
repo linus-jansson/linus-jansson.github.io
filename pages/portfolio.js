@@ -9,10 +9,35 @@ import Hamburger from '../components/Hamburger'
 import Card from '../components/Card'
 
 export default function p() {
+    let my_work = {
+        rafiki: {
+            title: 'Pizzeria Rafiki',
+            description: "A website for a pizzeria",
+            link: "https://ntig-uppsala.github.io/pizzeria-rafiki/",
+            repo: 'https://github.com/NTIG-Uppsala/pizzeria-rafiki'
+        },
+        saxe: {
+            title: 'Frisör Saxè',
+            description: "A website for a hairdresser",
+            link: "https://ntig-uppsala.github.io/Frisor-Saxe/",
+            repo: "https://github.com/NTIG-Uppsala/Frisor-Saxe"
+        }
+
+    }
     let cards = []
 
-    for (let i = 1; i <= 8; i++) {
-        cards.push(<Card key={i} title={`Portfolio card${i}`} description='This website! Built with Next.js and not TailwindCSS.' href='' />)
+
+    for (const mywork in my_work) {
+        if (my_work.hasOwnProperty.call(my_work, mywork)) {
+            const properties = my_work[mywork];
+            console.log(properties)
+            cards.push(
+                <Card key={properties.title}
+                    title={properties.title}
+                    description={properties.description}
+                    href={properties.link} />
+            )
+        }
     }
 
     return (
