@@ -6,7 +6,7 @@ import styles from '../styles/Hamburger.module.css'
 export default function Hamburger() {
 
 return (
-    <div className={styles.ham_div}>
+    <div>
         <label>
             {/* https://codepen.io/alvarotrigo/pen/ExwgbZv */}
             <input type="checkbox" className={styles.input}/>
