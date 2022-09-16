@@ -1,37 +1,10 @@
+
 .icon_link {
-    background-image: url('/link.svg');
-    width: 32px;
-    height: 32px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-
-.icon_github {
-    position: absolute;
-
-    background-image: url('/github.svg');
-    background-position: right; /* Center the image */
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    width: 32px;
-    height: 32px;
-    
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.icon_linkedin {
-    position: absolute;
-
-    background-image: url('/linkedin.svg');
-    background-position: right; /* Center the image */
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    width: 32px;
-    height: 32px;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-
+/* https://codepen.io/sosuke/pen/Pjoqqp */
+.icon_link:hover {
+    filter: invert(61%) sepia(89%) saturate(3793%) hue-rotate(84deg) brightness(126%) contrast(115%);
 }
