@@ -5,6 +5,8 @@ import Image from 'next/image'
 import styles from '../styles/Index.module.css'
 import icons from '../styles/icons.module.css'
 
+import {Github, Linkedin} from '../components/Icons'
+
 import Hamburger from '../components/Hamburger'
 
 
@@ -41,15 +43,11 @@ export default function a() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="https://github.com/linus-jansson/">
-                                    <a target="_blank" className={icons.icon_github}></a>
-                                </Link>
+                                <Github href="https://github.com/linus-jansson/"/>
                             </li>
-                            {/* <li>
-                                <Link href="https://linkedin.com/in/linus-jansson-94715924a">
-                                    <a target="_blank" className={icons.icon_linkedin}></a>
-                                </Link>
-                            </li> */}
+                            <li>
+                                <Linkedin href="https://linkedin.com/in/linus-jansson-94715924a/"/>
+                            </li>
                         </ul>
                         
 
