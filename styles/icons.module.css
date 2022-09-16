@@ -6,5 +6,6 @@
 
 /* https://codepen.io/sosuke/pen/Pjoqqp */
 .icon_link:hover {
+    scale: 1.1;
     filter: invert(61%) sepia(89%) saturate(3793%) hue-rotate(84deg) brightness(126%) contrast(115%);
 }
