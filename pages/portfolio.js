@@ -29,7 +29,6 @@ export default function p() {
     for (const mywork in my_work) {
         if (my_work.hasOwnProperty.call(my_work, mywork)) {
             const properties = my_work[mywork];
-            console.log(properties)
             cards.push(
                 <Card key={properties.title}
                     title={properties.title}
