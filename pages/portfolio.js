@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import styles from '../styles/Portfolio.module.css'
-import icons from '../styles/icons.module.css'
 
 import Hamburger from '../components/Hamburger'
 import Card from '../components/Card'

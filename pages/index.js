@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import styles from '../styles/Index.module.css'
-import icons from '../styles/icons.module.css'
 
 import {Github, Linkedin} from '../components/Icons'
 
