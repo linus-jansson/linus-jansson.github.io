@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Build and next export
-        run: npm run build
+        run: npm run export
 
       - uses: actions/upload-artifact@v3
         with:
