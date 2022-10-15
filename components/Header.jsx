@@ -6,7 +6,7 @@ const Header = (props) => {
           <div className="hero-mask">
             <div className="container">
               <div className="hero-content">
-                <h1>I&apos;m <span className="typed" data-typed-items="Linus Jansson"></span></h1>
+                <h1>I&apos;m <span className="typed" data-typed-items="Linus Jansson, a software developer"></span></h1>
                 <p>Self-learned developer from Sweden</p>
 
                 <ul className="list-unstyled list-social">
