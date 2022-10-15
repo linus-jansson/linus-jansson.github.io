@@ -11,6 +11,10 @@ export default function Index() {
 
   return (
     <>
+        <Head>
+            <title>Hey! I'm Linus!</title>
+        </Head>
+
         <Header />
 
         <main id="main">
