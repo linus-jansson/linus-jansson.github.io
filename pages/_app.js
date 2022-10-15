@@ -6,6 +6,8 @@ import Script from 'next/script'
 function MyApp({ Component, pageProps }) {
     return (
         <>
+            <Script src="https://kit.fontawesome.com/9b76113ff6.js" crossorigin="anonymous" />
+
             <Script strategy='beforeInteractive' src="vendor/bootstrap/js/bootstrap.bundle.min.js"/>
 
             <Script strategy='beforeInteractive' src="vendor/glightbox/js/glightbox.min.js"/>

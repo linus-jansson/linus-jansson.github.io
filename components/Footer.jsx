@@ -14,12 +14,7 @@ const Footer = (props) => {
 
             </div>
 
-            <p>&copy; Copyrights Folio. All rights reserved.</p>
-
-            <div className="credits">
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-
+            <p>&copy; Copyrights <a href="https://bootstrapmade.com/">Folio</a>. All rights reserved.</p>
           </div>
         </div>
     )

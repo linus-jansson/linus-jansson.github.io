@@ -74,7 +74,7 @@ const Portfolio = (props) => {
 
             <div className="container">
                 <div className="section-title text-center">
-                    <h2>Some of my projects</h2>
+                    <h2>Some of my recent projects</h2>
                 </div>
 
 
