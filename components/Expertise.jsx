@@ -17,7 +17,7 @@ const Expertise = () => {
       {
         icon: 'fa fa-laptop',
         title: 'Web Development',
-        description: 'Since I starting software development I have since day one in one way or another been working with web development.'
+        description: 'Since starting software development I have since day one in one way or another been working with web developments all forms.'
       },
       {
         icon: 'fa fa-code',
