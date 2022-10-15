@@ -8,7 +8,7 @@ const Header = (props) => {
             <div className="container">
               <div className="hero-content">
                 <h1>I&apos;m <span className="typed" data-typed-items="Linus Jansson"></span></h1>
-                <p>Semi self-learned developer from Sweden</p>
+                <p>Self-learned developer from Sweden</p>
 
                 <ul className="list-unstyled list-social">
                   <li><a href={github}><i className="bi bi-github" style={{fontSize: 2 + 'em'}}></i></a></li>
