@@ -1,4 +1,4 @@
 # frontend app
 
 ## todo: 
-- fixa warnings
+- fixa build warnings
