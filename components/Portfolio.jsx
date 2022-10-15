@@ -8,13 +8,13 @@ const Portfolio_card = (props) => {
                 <h4>{ props.title }</h4>
                 <p>{props.description}</p>
                 { (props.hasOwnProperty('repo') && props.repo !== undefined ) ? 
-                    <a href={props.repo} className="portfolio-lightbox preview-link" title="App 1"><i className="bi bi-github"></i></a>
+                    <a href={props.repo} className="portfolio-lightbox preview-link" title="App 1"><i className="fa fa-github"></i></a>
                     :
                     null
                 }
 
                 { (props.hasOwnProperty('website') && props.website !== undefined) ? 
-                    <a href={props.website} className="details-link"><i className="bx bx-link"></i></a>
+                    <a href={props.website} className="details-link"><i className="fa fa-link"></i></a>
                     : 
                     null 
                 }
