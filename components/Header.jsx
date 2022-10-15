@@ -1,7 +1,6 @@
-const Header = (props) => {
-    const github = "https://www.github.com/linus-jansson"
-    const linkedin = "https://www.linkedin.com/in/linus-jansson-94715924a/"
+import Socials from './Socials'
 
+const Header = (props) => {
     return (
       <div id="hero" className="home">
           <div className="hero-mask">
@@ -11,8 +10,7 @@ const Header = (props) => {
                 <p>Self-learned developer from Sweden</p>
 
                 <ul className="list-unstyled list-social">
-                  <li><a href={github}><i className="bi bi-github" style={{fontSize: 2 + 'em'}}></i></a></li>
-                  <li><a href={linkedin}><i className="bi bi-linkedin" style={{fontSize: 2 + 'em'}}></i></a></li>
+                  <Socials size="2"/>
                 </ul>
               </div>
             </div>
