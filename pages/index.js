@@ -12,7 +12,7 @@ export default function Index() {
   return (
     <>
         <Head>
-            <title>Hey! I'm Linus!</title>
+            <title>Hey! I&apos;m Linus!</title>
         </Head>
 
         <Header />
