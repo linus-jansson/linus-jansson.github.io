@@ -7,7 +7,7 @@ const Footer = (props) => {
             <div className="socials-media text-center">
 
               <ul className="list-unstyled list-social">
-                <Socials size="1.5"/>
+                <Socials size="1"/>
               </ul>
 
             </div>
