@@ -95,7 +95,11 @@ const Portfolio = (props) => {
                 </div>
 
                 <ul className="cards">
-                    {(!portfolioItems) ? <h2>Loading content</h2> : portfolioItems}
+                    {(!portfolioItems) ? 
+                        <div className="section-title text-center">
+                            <h2>Loading content...</h2> 
+                        </div>
+                    : portfolioItems}
                 </ul>
 
                 <div className="row portfolio-container">
