@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import Header from '../components/Header'
 import About from '../components/About'
+import Expertise from '../components/Expertise'
 import Portfolio from '../components/Portfolio'
 import Footer from '../components/Footer'
 
@@ -20,6 +21,8 @@ export default function Index() {
         <main id="main">
             <About/>
 
+            <Expertise/>
+
             <Portfolio/>
 
         </main>
@@ -27,7 +30,7 @@ export default function Index() {
         <Footer/>
 
         <a href="#" className="back-to-top d-flex align-items-center justify-content-center">
-            <i className="bi bi-arrow-up-short"></i>
+            <i className="fa fa-arrow-up"></i>
         </a>
     </>
   )
