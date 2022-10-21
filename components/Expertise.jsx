@@ -50,7 +50,7 @@ const Expertise = () => {
 
     return (
 
-        <div id="services" className='bg-primary pb-12 flex justify-center align-center flex-wrap'>
+        <div id="services" className='bg-primary dark:bg-darkPrimary pb-12 flex justify-center align-center flex-wrap'>
             <style jsx>{`
                 .swiper-pagination {
                     max-width:100vw;
@@ -80,8 +80,8 @@ const Expertise = () => {
                             return (
                                 <SwiperSlide className="swiper-slide pb-12 flex justify-center" key={index}>
                                     <div className='flex flex-col '>
-                                        <i className={'text-3xl mb-2 ' + item.icon}></i>
-                                        <span className='text-lg sm:text-xl'>{item.title}</span>
+                                        <i className={'dark:text-darkTextPrimary text-3xl mb-2 ' + item.icon}></i>
+                                        <span className='text-lg sm:text-xl dark:text-darkTextPrimary'>{item.title}</span>
 
                                         <p className="text-sm sm:text-base text-textSecondary">
                                             {item.description}
