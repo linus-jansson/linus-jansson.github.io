@@ -95,9 +95,9 @@ const Portfolio = (props) => {
 
     return (
 
-        <div id="portfolio" className="pt-24 pl-5 pr-5 sm:pb-48 bg-secondary">
-            <div className="text-center">
-                <p className='text-2xl font-bold'>Some of my recent projects</p>
+        <div id="portfolio" className="pt-24 pl-5 pr-5 sm:pb-24 bg-secondary">
+            <div className="text-center pb-5 sm:pb-10">
+                <p className='text-2xl sm:text-4xl font-bold'>Some of my recent projects</p>
             </div>
             <div className='flex flex-col sm:flex-row sm:flex-wrap sm:gap-12 sm:flex sm:justify-center'>
                 {(!portfolioItems) ?

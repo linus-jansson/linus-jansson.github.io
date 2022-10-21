@@ -9,10 +9,10 @@ const Socials = (props) => {
 
     return (
         <ul className="flex flex-row">
-            <li className="m-3"><a href={github}><i className={icon_color + " fa fa-github"} style={{ fontSize: props.size + 'em' }}></i></a></li>
-            <li className="m-3"><a href={linkedin}><i className={icon_color + " fa fa-linkedin"} style={{ fontSize: props.size + 'em' }}></i></a></li>
-            <li className="m-3"><a href={discord}><i className={icon_color + " fa-brands fa-discord"} style={{ fontSize: props.size + 'em' }}></i></a></li>
-            <li className="m-3"><a href={mail}><i className={icon_color + " fa fa-envelope"} style={{ fontSize: props.size + 'em' }}></i></a></li>
+            <li className="m-3 hover:shadow-xl"><a href={github}><i className={icon_color + " fa fa-github"} style={{ fontSize: props.size + 'em' }}></i></a></li>
+            <li className="m-3 hover:shadow-xl"><a href={linkedin}><i className={icon_color + " fa fa-linkedin"} style={{ fontSize: props.size + 'em' }}></i></a></li>
+            <li className="m-3 hover:shadow-xl"><a href={discord}><i className={icon_color + " fa-brands fa-discord"} style={{ fontSize: props.size + 'em' }}></i></a></li>
+            <li className="m-3 hover:shadow-xl"><a href={mail}><i className={icon_color + " fa fa-envelope"} style={{ fontSize: props.size + 'em' }}></i></a></li>
         </ul>
     )
 }
