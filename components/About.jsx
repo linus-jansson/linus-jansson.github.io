@@ -1,4 +1,4 @@
-const About = (props) => {
+const About = () => {
     return (
         <>
             <div id="" className="bg-primary flex justify-center pt-12 pb-12 ">
