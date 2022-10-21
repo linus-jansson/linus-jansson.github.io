@@ -81,9 +81,9 @@ const Expertise = () => {
                                 <SwiperSlide className="swiper-slide pb-12 flex justify-center" key={index}>
                                     <div className='flex flex-col '>
                                         <i className={'text-3xl mb-2 ' + item.icon}></i>
-                                        <span className='text-xl'>{item.title}</span>
+                                        <span className='text-lg sm:text-xl'>{item.title}</span>
 
-                                        <p className="text-base text-textSecondary">
+                                        <p className="text-sm sm:text-base text-textSecondary">
                                             {item.description}
                                         </p>
                                     </div>
