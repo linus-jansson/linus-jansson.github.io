@@ -1,7 +1,4 @@
-import Image from 'next/image'
 import React, { useEffect, useState, useLayoutEffect } from 'react'
-
-import Styles from '../styles/card.module.css'
 
 const portfolio_items = [
     {
@@ -46,7 +43,7 @@ const Card = (props) => {
                 <div className="relative px-4 pb-4 -mt-16">
                     <div className="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl duration-500">
 
-                        <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">{props.title}</h4>
+                        <h4 className="mt-1 text-xl font-semibold uppercase leading-tight">{props.title}</h4>
 
                         <div className="mt-1">
                             <span className="text-gray-600 text-sm">{props.description}</span>
