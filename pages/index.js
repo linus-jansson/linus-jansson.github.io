@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -10,41 +10,39 @@ import Portfolio from '../components/Portfolio'
 import Footer from '../components/Footer'
 
 const ScrollTop = () => {
+    const [showScroll, setShowScroll] = useState(false)
+
+
     useEffect(() => {
         if (window !== undefined) {
             // Get the button
-            let mybutton = document.getElementById("btn-back-to-top");
-
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function () {
-                scrollFunction();
+            window.onscroll = () => {
+                setShowScroll(() => (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20))
             };
-
-            function scrollFunction() {
-                if (
-                    document.body.scrollTop > 20 ||
-                    document.documentElement.scrollTop > 20
-                ) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
-                }
-            }
-            // When the user clicks on the button, scroll to the top of the document
-            mybutton.addEventListener("click", backToTop);
-
-            function backToTop() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
         }
 
     }, [])
 
+
     return (
-        <button style={{ position: 'fixed', display: 'none' }} type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="z-[99999] inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
-            <i className="text-zinc-50 text-lg fa fa-arrow-up fa-bounce"></i>
-        </button>
+        <>
+            {(!showScroll) ? null :
+                <button
+                    onClick={() => { document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }}
+                    type="button"
+                    className="z-[99999] fixed p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
+                    id="btn-back-to-top"
+                >
+                    <i className="text-zinc-50 text-lg fa fa-arrow-up fa-bounce"></i>
+                </button>
+            }
+
+
+        </>
+
+
+
+
     )
 }
 

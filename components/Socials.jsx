@@ -3,7 +3,6 @@ const Socials = (props) => {
     const linkedin = "https://www.linkedin.com/in/linus-jansson-94715924a/"
     const discord = "https://discord.com/users/322015089529978880"
     const mail = "mailto:contact@limpan.dev"
-    console.log(props)
 
     let icon_color = (props.dark) ? "text-textSecondary" : "text-textPrimary";
 

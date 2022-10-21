@@ -73,7 +73,7 @@ const Expertise = () => {
                     }}
                     loop={true}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
-                    pagination={{ clickable: true }}
+                    pagination={{ clickable: true, type: 'bullets' }}
                 >
                     {
                         expertise.map((item, index) => {

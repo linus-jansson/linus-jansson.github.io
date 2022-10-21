@@ -9,7 +9,6 @@ const ImageLoader = (props) => {
 }
 
 const TypingEffect = ({ text }) => {
-    console.log(text)
     useEffect(() => {
 
         // Options for the Typed object
