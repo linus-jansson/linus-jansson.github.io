@@ -57,7 +57,7 @@ const Expertise = () => {
                 }
             `}</style>
 
-            <div className="max-w-2xl w-1/2 sm:w-11/12 ">
+            <div className="max-w-2xl w-full pr-5 pl-5 sm:w-11/12 ">
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay, A11y]}
                     slidesPerView='auto'
