@@ -1,7 +1,7 @@
 const About = (props) => {
     return (
         <>
-            <div id="" className="bg-secondary flex justify-center pt-12 pb-12 ">
+            <div id="" className="bg-primary flex justify-center pt-12 pb-12 ">
                 <div className="max-w-2xl pr-5 pl-5">
                     <p className="text-3xl font-bold mb-10">About me</p>
                     <p className="text-sm mb-5 text-textSecondary">I&apos;m a {new Date().getFullYear() - 2003}yr old software developer from Sweden</p>
