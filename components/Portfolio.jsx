@@ -79,22 +79,25 @@ const Portfolio = (props) => {
             <div className="text-center pb-5 sm:pb-10">
                 <p className='text-2xl sm:text-4xl font-bold'>Some of my recent projects</p>
             </div>
-            <div className='grid md:grid-cols-3 md:gap-12'>
-                {
-                    portfolio_items.map((item, index) => {
-                        return (
-                            <Card
-                                key={index}
-                                title={item.title}
-                                description={item.description}
-                                image={item.image}
-                                website={item?.website}
-                                repo={item?.repo}
-                            />
-                        )
-                    })
-                }
+            <div className='grid justify-center'>
+                <div className='grid md:grid-cols-3 md:gap-12'>
+                    {
+                        portfolio_items.map((item, index) => {
+                            return (
+                                <Card
+                                    key={index}
+                                    title={item.title}
+                                    description={item.description}
+                                    image={item.image}
+                                    website={item?.website}
+                                    repo={item?.repo}
+                                />
+                            )
+                        })
+                    }
+                </div>
             </div>
+
         </div>
 
     )
