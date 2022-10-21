@@ -42,8 +42,8 @@ const ScrollTop = () => {
     }, [])
 
     return (
-        <button style={{ position: 'fixed', display: 'none' }} type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
-            <i className="w-4 h-4 text-zinc-50 fa fa-arrow-up"></i>
+        <button style={{ position: 'fixed', display: 'none' }} type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="z-[99999] inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
+            <i className="text-zinc-50 text-lg fa fa-arrow-up fa-bounce"></i>
         </button>
     )
 }
@@ -70,6 +70,7 @@ export default function Index() {
             </main>
 
             <Footer />
+
             <ScrollTop />
         </>
     )
