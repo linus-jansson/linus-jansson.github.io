@@ -37,35 +37,40 @@ const Card = (props) => {
     // https://codepen.io/seyedi/pen/zYoeLEv
 
     return (
-        <li className={Styles.card}>
-            <a href={props.website}>
-                <img src={props.image} className={Styles.card__image} alt="" />
-            </a>
 
-            <div className={Styles.card__overlay}>
-                <div className={Styles.card__header}>
-                    {/* <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                      */}
-                    {/* <img className="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" /> */}
-                    <div className="card__header-text">
-                        <h3 className={Styles.card__title}>{props.title}</h3>
-                        <span className={Styles.card__status}>{props.description}</span>
+        <div className="bg-secondary antialiased text-gray-900 mt-5 mb-5 sm:mb-3">
+            <div id='card' className=''>
+                <a href={props.website}>
+                    <img src={props.image} alt="random imgee" className="w-full sm:h-48 sm:w-auto object-cover object-center rounded-lg shadow-md" />
+                </a>
+                <div className="relative px-4 pb-4 -mt-16">
+                    <div className="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl duration-500">
+
+                        <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">{props.title}</h4>
+
+                        <div className="mt-1">
+                            <span className="text-gray-600 text-sm">{props.description}</span>
+                        </div>
+                        <div className="mt-4">
+                            {(props.hasOwnProperty('repo') && props.repo !== undefined) ?
+                                <a href={props.repo}><i className="text-xl mr-5 fa fa-github"></i></a>
+
+                                :
+                                null
+                            }
+
+                            {(props.hasOwnProperty('website') && props.website !== undefined) ?
+                                <a href={props.website}><i className="text-xl fa fa-link"></i></a>
+                                :
+                                null
+                            }
+
+                        </div>
                     </div>
                 </div>
-                <div className={Styles.card__description}>
-                    {(props.hasOwnProperty('repo') && props.repo !== undefined) ?
-                        <a href={props.repo}><i className="fa fa-github"></i></a>
-                        :
-                        null
-                    }
 
-                    {(props.hasOwnProperty('website') && props.website !== undefined) ?
-                        <a href={props.website}><i className="fa fa-link"></i></a>
-                        :
-                        null
-                    }
-                </div>
             </div>
-        </li>
+        </div>
     )
 }
 
@@ -90,23 +95,18 @@ const Portfolio = (props) => {
 
     return (
 
-        <div id="portfolio" className="flex flex-col pt-24 pb-12">
-            <div className="section-title text-center">
+        <div id="portfolio" className="pt-24 pl-5 pr-5 sm:pb-48 bg-secondary">
+            <div className="text-center">
                 <p className='text-2xl font-bold'>Some of my recent projects</p>
             </div>
-
-            <ul className={Styles.cards}>
+            <div className='flex flex-col sm:flex-row sm:flex-wrap sm:gap-12 sm:flex sm:justify-center'>
                 {(!portfolioItems) ?
-                    <div className="section-title text-center">
+                    <div className="text-center">
                         <h2>Loading content...</h2>
                     </div>
                     : portfolioItems}
-            </ul>
-
-            <div className="row portfolio-container">
-
-
             </div>
+
 
         </div>
 
