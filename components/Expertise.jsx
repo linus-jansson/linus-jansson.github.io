@@ -47,49 +47,30 @@ let expertise = [
     },
 ]
 const Expertise = () => {
-    useEffect(() => {
-
-        // /* Testimonials slider */
-        // new Swiper('.expertise-slider', {
-        //     speed: 600,
-        //     loop: true,
-        //     autoplay: {
-        //         delay: 5000,
-        //         disableOnInteraction: false
-        //     },
-        //     slidesPerView: 'auto',
-        //     pagination: {
-        //         el: '.swiper-pagination',
-        //         type: 'bullets',
-        //         clickable: true
-        //     },
-        //     breakpoints: {
-        //         320: {
-        //             slidesPerView: 1,
-        //             spaceBetween: 20
-        //         },
-        //         768: {
-        //             slidesPerView: 2,
-        //             spaceBetween: 20
-        //         },
-        //         1200: {
-        //             slidesPerView: 4,
-        //             spaceBetween: 20
-        //         }
-        //     }
-        // });
-
-
-    }, [])
 
     return (
-        <div id="services" className='bg-secondary flex justify-center pb-12 pr-5 pl-5 '>
 
-            <div className="max-w-2xl">
+        <div id="services" className='bg-primary pb-12 flex justify-center align-center flex-wrap'>
+            <style jsx>{`
+                .swiper-pagination {
+                    max-width:100vw;
+                }
+            `}</style>
+
+            <div className="max-w-2xl w-1/2 sm:w-11/12 ">
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay, A11y]}
-                    spaceBetween={50}
                     slidesPerView='auto'
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 20
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                    }}
                     loop={true}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
                     pagination={{ clickable: true }}
@@ -97,12 +78,12 @@ const Expertise = () => {
                     {
                         expertise.map((item, index) => {
                             return (
-                                <SwiperSlide className="swiper-slide pb-12" key={index}>
-                                    <div className='flex flex-col w-full'>
-                                        <i className={'text-3xl  ' + item.icon}></i>
+                                <SwiperSlide className="swiper-slide pb-12 flex justify-center" key={index}>
+                                    <div className='flex flex-col '>
+                                        <i className={'text-3xl mb-2 ' + item.icon}></i>
                                         <span className='text-xl'>{item.title}</span>
 
-                                        <p className="text-base text-textSecondary ">
+                                        <p className="text-base text-textSecondary">
                                             {item.description}
                                         </p>
                                     </div>
@@ -115,7 +96,7 @@ const Expertise = () => {
                 </Swiper>
             </div>
 
-        </div>
+        </div >
     )
 }
 
