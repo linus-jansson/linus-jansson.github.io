@@ -10,6 +10,10 @@
     --curve: 10;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins", helvetica;
 }
