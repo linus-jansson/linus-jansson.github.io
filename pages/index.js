@@ -29,8 +29,8 @@ export default function Index() {
 
         <Footer/>
 
-        <a href="#" className="back-to-top d-flex align-items-center justify-content-center">
-            <i className="fa fa-arrow-up"></i>
+        <a href="#" onClick={() => console.log("scroll up button pressed")}className="back-to-top fixed flex justify-center bottom-[15] right-[15] w-40 h-40 z-100 bg-[#b8a07e]">
+            <i className="font-[28px] text-zinc-50 fa fa-arrow-up"></i>
         </a>
     </>
   )

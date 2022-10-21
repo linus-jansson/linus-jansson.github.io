@@ -3,6 +3,8 @@
 @import 'tailwindcss/utilities';
 
 
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i');
+
 :root {
     --surface-color: #f7f7f7;
     --curve: 10;
@@ -10,4 +12,8 @@
 
 body {
     font-family: "Poppins", helvetica;
+}
+
+#about {
+    font-family: "Playfair Display", serif;
 }

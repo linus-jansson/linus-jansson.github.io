@@ -10,6 +10,7 @@ module.exports = {
                 "primary": "#fff",
                 "secondary": "#f7f7f7",
                 "textPrimary": "#f5f5f5",
+                "textSecondary": "#999",
             },
         },
         plugins: [],

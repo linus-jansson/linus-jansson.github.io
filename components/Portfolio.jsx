@@ -1,5 +1,7 @@
 import Image from 'next/image'
-import React, {useEffect, useState, useLayoutEffect} from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react'
+
+import Styles from '../styles/card.module.css'
 
 const portfolio_items = [
     {
@@ -35,31 +37,31 @@ const Card = (props) => {
     // https://codepen.io/seyedi/pen/zYoeLEv
 
     return (
-        <li className="card">
+        <li className={Styles.card}>
             <a href={props.website}>
-                <img src={props.image} className="card__image" alt="" />
+                <img src={props.image} className={Styles.card__image} alt="" />
             </a>
-            
-            <div className="card__overlay">
-                <div className="card__header">
+
+            <div className={Styles.card__overlay}>
+                <div className={Styles.card__header}>
                     {/* <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                      */}
                     {/* <img className="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" /> */}
                     <div className="card__header-text">
-                        <h3 className="card__title">{props.title}</h3>            
-                        <span className="card__status">{props.description}</span>
+                        <h3 className={Styles.card__title}>{props.title}</h3>
+                        <span className={Styles.card__status}>{props.description}</span>
                     </div>
                 </div>
-                <div className="card__description">
-                    { (props.hasOwnProperty('repo') && props.repo !== undefined ) ? 
+                <div className={Styles.card__description}>
+                    {(props.hasOwnProperty('repo') && props.repo !== undefined) ?
                         <a href={props.repo}><i className="fa fa-github"></i></a>
                         :
                         null
                     }
 
-                    { (props.hasOwnProperty('website') && props.website !== undefined) ? 
+                    {(props.hasOwnProperty('website') && props.website !== undefined) ?
                         <a href={props.website}><i className="fa fa-link"></i></a>
-                        : 
-                        null 
+                        :
+                        null
                     }
                 </div>
             </div>
@@ -73,13 +75,13 @@ const Portfolio = (props) => {
     useEffect(() => {
         let p_items_list = portfolio_items.map((item, index) => {
             return (
-                <Card 
-                key={index}    
-                title={item.title} 
-                description={item.description} 
-                image={item.image} 
-                website={item?.website} 
-                repo={item?.repo}
+                <Card
+                    key={index}
+                    title={item.title}
+                    description={item.description}
+                    image={item.image}
+                    website={item?.website}
+                    repo={item?.repo}
                 />
             )
         })
@@ -87,29 +89,27 @@ const Portfolio = (props) => {
     }, [])
 
     return (
-        <div id="portfolio" className="paddsection">
 
-            <div className="container">
-                <div className="section-title text-center">
-                    <h2>Some of my recent projects</h2>
-                </div>
+        <div id="portfolio" className="flex flex-col pt-24 pb-12">
+            <div className="section-title text-center">
+                <p className='text-2xl font-bold'>Some of my recent projects</p>
+            </div>
 
-                <ul className="cards">
-                    {(!portfolioItems) ? 
-                        <div className="section-title text-center">
-                            <h2>Loading content...</h2> 
-                        </div>
+            <ul className={Styles.cards}>
+                {(!portfolioItems) ?
+                    <div className="section-title text-center">
+                        <h2>Loading content...</h2>
+                    </div>
                     : portfolioItems}
-                </ul>
+            </ul>
 
-                <div className="row portfolio-container">
+            <div className="row portfolio-container">
 
-
-                </div>
 
             </div>
 
         </div>
+
     )
 
 
