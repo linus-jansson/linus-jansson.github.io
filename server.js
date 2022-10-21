@@ -9,16 +9,16 @@ const http_server = http.Server(server);
 
 const dev = process.env.NODE_ENV !== 'production'
 
-const nextApp = next({dev})
+const nextApp = next({ dev })
 const nextHandler = nextApp.getRequestHandler()
 
 nextApp.prepare().then(() => {
-        
+
     /* Set up body-parser */
     server.use(bodyParser.urlencoded({
         extended: true
     }));
-    
+
     /* Handle all requests through next */
     server.get("*", (req, res) => {
         return nextHandler(req, res)

@@ -91,7 +91,7 @@ const Expertise = () => {
                     spaceBetween={50}
                     slidesPerView='auto'
                     loop={true}
-                    autoplay={{delay: 5000, disableOnInteraction: false}}
+                    autoplay={{ delay: 5000, disableOnInteraction: false }}
                     pagination={{ clickable: true }}
                 >
                     {
@@ -106,7 +106,7 @@ const Expertise = () => {
                                             {item.description}
                                         </p>
                                     </div>
-                                    
+
                                 </SwiperSlide>
                             )
                         })

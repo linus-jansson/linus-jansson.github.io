@@ -1,29 +1,29 @@
 {
-  "name": "limpan",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "node server.js",
-    "export": "next build && next export && touch ./out/.nojekyll && echo 'limpan.dev' > ./out/CNAME",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "body-parser": "^1.20.1",
-    "express": "^4.18.2",
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "swiper": "^8.4.4",
-    "typed.js": "^2.0.12"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.12",
-    "eslint": "8.25.0",
-    "eslint-config-next": "12.3.1",
-    "postcss": "^8.4.18",
-    "tailwindcss": "^3.2.0"
-  }
+    "name": "limpan",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "node server.js",
+        "export": "next build && next export && touch ./out/.nojekyll && echo 'limpan.dev' > ./out/CNAME",
+        "build": "next build",
+        "start": "NODE_ENV=production node server.js",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.1",
+        "express": "^4.18.2",
+        "next": "12.3.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "swiper": "^8.4.4",
+        "typed.js": "^2.0.12"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.12",
+        "eslint": "8.25.0",
+        "eslint-config-next": "12.3.1",
+        "postcss": "^8.4.18",
+        "tailwindcss": "^3.2.0"
+    }
 }

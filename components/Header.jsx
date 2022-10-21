@@ -35,14 +35,14 @@ const TypingEffect = ({ text }) => {
 
 const Header = (props) => {
 
-    
+
 
     return (
         <>
             <div id="header" style={{ backgroundImage: 'url("/img/background.jpg")', backgroundColor: 'rgba(0, 0, 0, .65)' }} className={'h-screen bg-cover bg-fixed bg-blend-darken flex justify-center'}>
                 <div className="w-9/12 h-screen ml-10 flex flex-col justify-center text-left">
                     <p className='text-3xl font-bold text-textPrimary'>I&apos;m <TypingEffect text={["Linus Jansson", "A Software Developer"]} /></p>
-                    
+
                     <p className="text-textPrimary text-lg">Self-learned developer from Sweden</p>
 
                     <Socials size="2" dark={false} />
