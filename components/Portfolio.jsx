@@ -38,10 +38,10 @@ const Card = (props) => {
 
     return (
 
-        <div className="bg-secondary antialiased text-gray-900 mt-5 mb-5 sm:mb-3">
+        <div className="bg-secondary antialiased text-gray-900 mt-5 mb-5 sm:mb-3 flex">
             <div id='card' className=''>
                 <a href={props.website}>
-                    <img src={props.image} alt="random imgee" className="w-full sm:h-48 sm:w-auto object-cover object-center rounded-lg shadow-md" />
+                    <img src={props.image} alt="random imgee" className="w-full sm:h-48 md:w-auto object-cover object-center rounded-lg shadow-md" />
                 </a>
                 <div className="relative px-4 pb-4 -mt-16">
                     <div className="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl duration-500">
@@ -75,37 +75,33 @@ const Card = (props) => {
 }
 
 const Portfolio = (props) => {
-    const [portfolioItems, setPortfolioItems] = useState(null)
-
-    useEffect(() => {
-        let p_items_list = portfolio_items.map((item, index) => {
-            return (
-                <Card
-                    key={index}
-                    title={item.title}
-                    description={item.description}
-                    image={item.image}
-                    website={item?.website}
-                    repo={item?.repo}
-                />
-            )
-        })
-        setPortfolioItems(p_items_list)
-    }, [])
 
     return (
 
-        <div id="portfolio" className="pt-24 pl-5 pr-5 sm:pb-24 bg-secondary">
+        <div id="portfolio" className="pt-24 pl-5 pr-5 sm:pb-24 bg-secondary flex justify-center flex-col ">
             <div className="text-center pb-5 sm:pb-10">
                 <p className='text-2xl sm:text-4xl font-bold'>Some of my recent projects</p>
             </div>
-            <div className='flex flex-col sm:flex-row sm:flex-wrap sm:gap-12 sm:flex sm:justify-center'>
-                {(!portfolioItems) ?
-                    <div className="text-center">
-                        <h2>Loading content...</h2>
-                    </div>
-                    : portfolioItems}
+            <div className='flex justify-center md:w-11/12'>
+                <div className='grid md:grid-cols-3 md:gap-12'>
+                    {
+                        portfolio_items.map((item, index) => {
+                            return (
+                                <Card
+                                    key={index}
+                                    title={item.title}
+                                    description={item.description}
+                                    image={item.image}
+                                    website={item?.website}
+                                    repo={item?.repo}
+                                />
+                            )
+                        })
+                    }
+                </div>
             </div>
+
+
 
 
         </div>
