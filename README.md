@@ -11,3 +11,4 @@
     - if repo has gh pages, add link to project and get screenshot of page
     - no image placeholder
     - 
+- jest testing
