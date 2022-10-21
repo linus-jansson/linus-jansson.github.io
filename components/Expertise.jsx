@@ -27,6 +27,11 @@ let expertise = [
     title: 'Version control',
     description: 'Git is my go to version control system, I have experience with both Git and Github.'
   },
+  {
+    icon: 'fa-brands fa-react',
+    title: 'React',
+    description: 'React is a big part of the industry and is something I am using for my own presonal projects, however I use NextJs for the ease of use of SSR!'
+  },
 ]
 
 const Card = (props) => {
