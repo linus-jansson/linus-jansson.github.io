@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+import fetch from 'node-fetch';
 /*
     Informations video ang oAuth2.0
     -> https://youtu.be/j-bHvqQ378s?t=302
@@ -14,17 +14,19 @@ import axios from 'axios'
 class DiscordAuth {
     constructor() {
 
-        this.CLIENT_ID = process.env.CLIENT_ID;
-        this.CLIENT_SECRET = process.env.CLIENT_SECRET;
-        this.REDIRECT_URI = process.env.REDIRECT_URI;
-        this.OAUTH_SCOPE = process.env.OAUTH_SCOPE;
+        this.CLIENT_ID = process.env.DISCORD_CLIENT_ID;
+        this.CLIENT_SECRET = process.env.DISCORD_CLIENT_SECRET;
+        this.REDIRECT_URI = (process.env.NODE_ENV === "production")
+            ? process.env.DISCORD_REDIRECT_URI : process.env.DISCORD_REDIRECT_URI_DEV;
+
+        this.OAUTH_SCOPE = process.env.DISCORD_OAUTH_SCOPE;
         this.DISCORD_ENDPOINT = process.env.DISCORD_ENDPOINT;
 
         this.DISCORD_ID_STATIC = 322015089529978880
 
 
 
-        this.initial_tokens()
+        // this.initial_tokens()
 
         this.user = null
         this.refresh_token = null
@@ -64,18 +66,26 @@ class DiscordAuth {
         body_data.append('redirect_uri', this.REDIRECT_URI);
         body_data.append('scope', 'identify email');
 
-        const authData = {
+        console.log(body_data)
+
+        const data = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Accept': 'application/json'
+            },
             body: body_data
         }
 
         try {
-            let discord_token_response = await axios.get(`${this.DISCORD_ENDPOINT}/oauth2/token`, authData);
-            this.token_obtained = new Date().getTime()
+            console.log(`${this.DISCORD_ENDPOINT}/oauth2/token`)
+            let discord_token_response = await fetch(`${this.DISCORD_ENDPOINT}/oauth2/token`, data);
+            console.log(discord_token_response)
             return discord_token_response
         } catch (err) {
-            throw err
+            console.log("Getting tokens failed")
+            return err
+            // throw err
         }
     }
 
@@ -163,9 +173,27 @@ class Auth extends DiscordAuth {
 
     }
 
-    login(cb) {
+    async login(query_code, cb) {
+
         this.authenticated = true;
-        cb(this.authenticated);
+
+        let response = await this.initial_tokens(query_code);
+        // console.log(response.data)
+        return response
+
+        // cb(this.authenticated);
+
+        // return new Promise(async (resolve, reject) => {
+        //     let res = await this.initial_tokens(query_code);
+        //     console.log()
+        //     try {
+        //         resolve(res)
+        //     } catch (error) {
+        //         reject(err)
+        //     }
+
+        // })
+
     }
 
     logout(cb) {

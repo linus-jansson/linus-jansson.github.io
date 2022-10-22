@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
+
 import express from 'express';
 import next from 'next'
 import bodyParser from 'body-parser';
@@ -14,6 +17,8 @@ const nextHandler = nextApp.getRequestHandler()
 
 import Auth from './auth.js';
 
+const auth = new Auth()
+
 nextApp.prepare().then(() => {
 
     /* Set up body-parser */
@@ -21,13 +26,24 @@ nextApp.prepare().then(() => {
         extended: true
     }));
 
-    server.get('/login', (req, res) => {
-        let auth = new Auth();
-        auth.login((result) => {
-            console.log(result)
-            return res.json(auth.authenticated)
-        });
+    server.get('/login', async (req, res) => {
+        let q_code = req.query.code
+        console.log("query code", q_code)
 
+        if (q_code) {
+            let login_result = await auth.login(q_code);
+
+            return res.json(login_result)
+        }
+
+
+        else
+            return res.redirect(auth.REDIRECT_URI)
+
+    });
+
+    server.get('/isloggedin', (req, res) => {
+        return res.json(auth.isAuthenticated)
     });
 
     /* Handle all requests through next */
