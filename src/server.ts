@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import http from 'http';
 
 const server = express()
-const http_server = http.Server(server);
+const http_server = new http.Server(server);
 // const io = require('socket.io')(http_server);
 
 const dev = process.env.NODE_ENV !== 'production'
