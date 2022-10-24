@@ -1,18 +1,16 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // import Swiper core and required modules
 import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import 'swiper/css/autoplay'
+import 'swiper/css/autoplay';
 
 let expertise = [
     {

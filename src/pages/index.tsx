@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { NextPage, NextComponentType } from 'next'
 
 import React, { useEffect, useState } from 'react'
 
@@ -11,7 +11,7 @@ import Expertise from '../components/Expertise'
 import Portfolio from '../components/Portfolio'
 import Footer from '../components/Footer'
 
-const ScrollTop: NextPage = () => {
+const ScrollTop: NextComponentType = () => {
     const [showScroll, setShowScroll] = useState(false)
 
 
