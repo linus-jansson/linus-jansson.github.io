@@ -1,4 +1,12 @@
-const Socials = (props) => {
+import type { NextPage } from 'next'
+
+interface socialProps {
+    dark: boolean,
+    size: number
+
+}
+
+const Socials: NextPage = (props: socialProps) => {
     const github = "https://www.github.com/linus-jansson"
     const linkedin = "https://www.linkedin.com/in/linus-jansson-94715924a/"
     const discord = "https://discord.com/users/322015089529978880"
