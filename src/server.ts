@@ -4,6 +4,8 @@ import next from 'next'
 import bodyParser from 'body-parser';
 import * as http from 'http';
 
+import compression from 'compression';
+
 const server = express()
 const http_server = new http.Server(server);
 // const io = require('socket.io')(http_server);
@@ -18,7 +20,7 @@ const nextHandler = nextApp.getRequestHandler()
 nextApp
     .prepare()
     .then((): void => {
-
+        server.use(compression())
         /* Set up body-parser */
         server.use(bodyParser.urlencoded({
             extended: true
