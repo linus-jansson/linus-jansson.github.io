@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Socials from './Socials'
+import Image from 'next/image'
 
 import Typed from 'typed.js';
 
@@ -36,8 +37,16 @@ const Header = () => {
 
     return (
         <>
-            <div id="header" style={{ backgroundImage: 'url("/img/background.jpg")', backgroundColor: 'rgba(0, 0, 0, .65)' }} className={'h-screen bg-cover bg-fixed bg-blend-darken flex justify-center'}>
-                <div className="w-full sm:w-9/12 h-screen ml-10 flex flex-col justify-center text-left">
+            <div id="header" className={'h-screen relative  bg-cover bg-fixed bg-blend-darken flex justify-center'}>
+                <div style={{ zIndex: -1 }} className='brightness-[.35] absolute w-screen h-screen top-0 '>
+                    <Image
+                        src='/img/background.jpg'
+                        layout='fill'
+                        objectFit="cover"
+                    />
+                </div>
+
+                <div className="z-1 w-full sm:w-9/12 h-screen ml-10 flex flex-col justify-center text-left">
                     <p className='text-4xl sm:text-5xl font-bold text-textPrimary pb-5'>I&apos;m <TypingEffect text={["Linus Jansson", "A Software Developer"]} /></p>
 
                     <p className="text-textPrimary text-xl sm:text-xl pb-5">Self-learned developer from Sweden</p>
