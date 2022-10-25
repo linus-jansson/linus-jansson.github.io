@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
-import type { NextPage } from 'next'
-import type { AppProps } from 'next/app'
+import type { NextComponentType } from 'next'
 
 
 const portfolio_items: Array<object> = [
@@ -41,7 +40,7 @@ interface portfolioCardProps {
     website?: string
 }
 
-const Card: NextPage = (props: portfolioCardProps) => {
+const Card = (props: portfolioCardProps) => {
     // https://codepen.io/seyedi/pen/zYoeLEv
 
     return (
@@ -82,7 +81,7 @@ const Card: NextPage = (props: portfolioCardProps) => {
     )
 }
 
-const Portfolio: NextPage = (props) => {
+const Portfolio: NextComponentType = () => {
 
     return (
 
@@ -93,10 +92,9 @@ const Portfolio: NextPage = (props) => {
             <div className='grid justify-center'>
                 <div className='grid md:grid-cols-3 md:gap-12'>
                     {
-                        portfolio_items.map((item, index): AppProps => {
+                        portfolio_items.map((item: portfolioCardProps, index) => {
                             return (
-                                <Card
-                                    key={index}
+                                <Card key={index}
                                     title={item.title}
                                     description={item.description}
                                     image={item.image}
