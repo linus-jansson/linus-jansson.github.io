@@ -127,7 +127,7 @@ def add_record(Config, ip):
             Config.password,
             Config.domain,
             Config.subdomain,
-            Config.new_record)
+            new_record)
 
     if Config.subdomain == '@':
         print('{domain}: {status}. Added new record.'.format(
