@@ -5,7 +5,7 @@ ARG LOOPIA_API_PASSWORD
 
 RUN apk add python3
 
-COPY dyndns_loopia.py /usr/bin/
+COPY DNS/dyndns_loopia.py /usr/bin/
 
 RUN dyndns_loopia.py
 
