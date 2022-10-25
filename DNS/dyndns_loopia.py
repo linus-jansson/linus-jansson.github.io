@@ -119,7 +119,7 @@ def add_record(Config, ip):
         'priority': '',
         'rdata': ip,
         'type': 'A',
-        'ttl': ttl
+        'ttl': "300"
     }
 
     status = client.addZoneRecord(
