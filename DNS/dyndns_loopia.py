@@ -46,7 +46,7 @@ class Config:
     domain = 'limpan.dev'
 
     # Which subdomain do you wish to update? Use "@" if you wish to update the root domain.
-    subdomain = '*'
+    subdomain = '@'
 
     # Time To Live value. You don't actually have to change this at all unless
     # you have a very specific reason for wanting a different value.
