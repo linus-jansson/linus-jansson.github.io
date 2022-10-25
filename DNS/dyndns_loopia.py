@@ -84,8 +84,8 @@ def del_excess(Config, zone_records):
     print('Deleted {} unnecessary record(s)'.format(str(num)))
 
 def get_ip():
-    """Get the IP adress of www.jansson.net"""
-    return socket.gethostbyname('www.jansson.net')
+    """Get the IP adress of www.limpan.dev"""
+    return socket.gethostbyname('www.limpan.dev')
 
 def get_records(Config):
     """Get current zone records"""
