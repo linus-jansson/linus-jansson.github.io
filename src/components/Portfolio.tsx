@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
+import type { NextComponentType } from 'next'
 
-const portfolio_items = [
+
+const portfolio_items: Array<object> = [
     {
         title: "Pizzeria Rafiki",
         description: "Frontend project",
@@ -30,7 +32,15 @@ const portfolio_items = [
     },
 ]
 
-const Card = (props) => {
+interface portfolioCardProps {
+    title: string,
+    description: string,
+    image: string,
+    repo?: string,
+    website?: string
+}
+
+const Card = (props: portfolioCardProps) => {
     // https://codepen.io/seyedi/pen/zYoeLEv
 
     return (
@@ -71,7 +81,7 @@ const Card = (props) => {
     )
 }
 
-const Portfolio = (props) => {
+const Portfolio: NextComponentType = () => {
 
     return (
 
@@ -82,10 +92,9 @@ const Portfolio = (props) => {
             <div className='grid justify-center'>
                 <div className='grid md:grid-cols-3 md:gap-12'>
                     {
-                        portfolio_items.map((item, index) => {
+                        portfolio_items.map((item: portfolioCardProps, index) => {
                             return (
-                                <Card
-                                    key={index}
+                                <Card key={index}
                                     title={item.title}
                                     description={item.description}
                                     image={item.image}

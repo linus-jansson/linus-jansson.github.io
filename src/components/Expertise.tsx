@@ -1,18 +1,7 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
 
-
-// import Swiper core and required modules
-import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/autoplay'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 
 let expertise = [
     {
@@ -58,28 +47,12 @@ const Expertise = () => {
             `}</style>
 
             <div className="max-w-2xl w-full pr-5 pl-5 sm:w-11/12 ">
-                <Swiper
-                    modules={[Navigation, Pagination, Autoplay, A11y]}
-                    slidesPerView='auto'
-                    breakpoints={{
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 20
-                        },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 20
-                        },
-                    }}
-                    loop={true}
-                    autoplay={{ delay: 5000, disableOnInteraction: false }}
-                    pagination={{ clickable: true, type: 'bullets' }}
-                >
+                <Splide aria-label="My Favorite Images" options={{ type: "loop", arrows: false, perPage: 2, breakpoints: { 640: { perPage: 1 } } }}>
                     {
                         expertise.map((item, index) => {
                             return (
-                                <SwiperSlide className="swiper-slide pb-12 flex justify-center" key={index}>
-                                    <div className='flex flex-col '>
+                                <SplideSlide className="flex justify-center" key={index} >
+                                    <div className="w-3/4">
                                         <i className={'dark:text-darkTextPrimary text-3xl mb-2 ' + item.icon}></i>
                                         <span className='text-lg sm:text-xl dark:text-darkTextPrimary'>{item.title}</span>
 
@@ -88,12 +61,12 @@ const Expertise = () => {
                                         </p>
                                     </div>
 
-                                </SwiperSlide>
+                                </SplideSlide>
                             )
                         })
                     }
+                </Splide>
 
-                </Swiper>
             </div>
 
         </div >

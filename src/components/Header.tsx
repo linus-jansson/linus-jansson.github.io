@@ -3,16 +3,13 @@ import Socials from './Socials'
 
 import Typed from 'typed.js';
 
-const ImageLoader = (props) => {
-    return "test"
-}
 
-const TypingEffect = ({ text }) => {
+const TypingEffect = (props: { text: Array<string> }) => {
     useEffect(() => {
 
         // Options for the Typed object
         const options = {
-            strings: text,
+            strings: props.text,
             loop: true,
             typeSpeed: 100,
             backSpeed: 50,
@@ -26,14 +23,16 @@ const TypingEffect = ({ text }) => {
         return () => {
             typed.destroy();
         };
-    }, [text]);
+    }, [props.text]);
 
     return (<span className='typed'></span>)
 }
 
-const Header = (props) => {
-
-
+const Header = () => {
+    const socialProps = {
+        dark: false,
+        size: 1.5
+    }
 
     return (
         <>
@@ -43,7 +42,7 @@ const Header = (props) => {
 
                     <p className="text-textPrimary text-xl sm:text-xl pb-5">Self-learned developer from Sweden</p>
 
-                    <Socials size="2" dark={false} />
+                    <Socials {...socialProps} />
 
                 </div>
 
