@@ -3,37 +3,33 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { NextComponentType } from 'next'
 
-import pizza_image from '../images/portfolio/pizzeria.png';
-import barber_image from '../images/portfolio/barbershop.png';
-import flower_image from '../images/portfolio/flowershop.png'
-import admin_image from '../images/portfolio/narvaro.png'
 
 const portfolio_items: Array<object> = [
     {
         title: "Pizzeria Rafiki",
         description: "Frontend project",
-        image: pizza_image,
+        image: "/img/portfolio/pizzeria.png",
         repo: "https://github.com/NTIG-Uppsala/pizzeria-rafiki/",
         website: "https://ntig-uppsala.github.io/pizzeria-rafiki/"
     },
     {
         title: "Frisör Saxé",
         description: "Frontend project",
-        image: barber_image,
+        image: "/img/portfolio/barbershop.png",
         repo: "https://github.com/NTIG-Uppsala/Frisor-Saxe/",
         website: "https://ntig-uppsala.github.io/Frisor-Saxe/"
     },
     {
         title: "Florist Blåklinten",
         description: "Frontend project",
-        image: flower_image,
+        image: "/img/portfolio/flowershop.png",
         repo: "https://github.com/NTIG-Uppsala/florist-blaklinten/",
         website: "https://ntig-uppsala.github.io/florist-blaklinten/"
     },
     {
         title: "Admin Närvaro",
         description: "Fullstack project",
-        image: admin_image,
+        image: "/img/portfolio/narvaro.png",
         website: "https://narvaro.ntig.net/"
     },
 ]
