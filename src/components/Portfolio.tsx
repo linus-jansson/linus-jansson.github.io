@@ -8,28 +8,28 @@ const portfolio_items: Array<object> = [
     {
         title: "Pizzeria Rafiki",
         description: "Frontend project",
-        image: "/img/portfolio/pizzeria.png",
+        image: "/images/portfolio/pizzeria.png",
         repo: "https://github.com/NTIG-Uppsala/pizzeria-rafiki/",
         website: "https://ntig-uppsala.github.io/pizzeria-rafiki/"
     },
     {
         title: "Frisör Saxé",
         description: "Frontend project",
-        image: "/img/portfolio/barbershop.png",
+        image: "/images/portfolio/barbershop.png",
         repo: "https://github.com/NTIG-Uppsala/Frisor-Saxe/",
         website: "https://ntig-uppsala.github.io/Frisor-Saxe/"
     },
     {
         title: "Florist Blåklinten",
         description: "Frontend project",
-        image: "/img/portfolio/flowershop.png",
+        image: "/images/portfolio/flowershop.png",
         repo: "https://github.com/NTIG-Uppsala/florist-blaklinten/",
         website: "https://ntig-uppsala.github.io/florist-blaklinten/"
     },
     {
         title: "Admin Närvaro",
         description: "Fullstack project",
-        image: "/img/portfolio/narvaro.png",
+        image: "/images/portfolio/narvaro.png",
         website: "https://narvaro.ntig.net/"
     },
 ]

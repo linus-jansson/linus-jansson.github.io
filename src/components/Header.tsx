@@ -3,7 +3,6 @@ import Socials from './Socials'
 import Image from 'next/image'
 
 import Typed from 'typed.js';
-
 const TypingEffect = (props: { text: Array<string> }) => {
     useEffect(() => {
 
@@ -39,7 +38,7 @@ const Header = () => {
             <div id="header" className={'h-screen relative  bg-cover bg-fixed bg-blend-darken flex justify-center'}>
                 <div style={{ zIndex: -1 }} className='brightness-[.35] absolute w-screen h-screen top-0 '>
                     <Image
-                        src='/img/background.jpg'
+                        src='/images/background.jpg'
                         alt='Picture of a IDE with ruby code'
                         layout='fill'
                         objectFit="cover"
