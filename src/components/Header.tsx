@@ -42,6 +42,7 @@ const Header = () => {
                 <div style={{ zIndex: -1 }} className='brightness-[.35] absolute w-screen h-screen top-0 '>
                     <Image
                         src={Background}
+                        alt='Picture of a IDE with ruby code'
                         layout='fill'
                         objectFit="cover"
                     />

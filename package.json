@@ -6,7 +6,7 @@
         "dev": "nodemon -i build -x 'ts-node --esm src/server.ts'",
         "export": "next build && next export && touch ./out/.nojekyll && echo 'limpan.dev' > ./out/CNAME",
         "build": "next build && tsc --project tsconfig.backend.json",
-        "start": "NODE_ENV=production node build/server.js",
+        "start": "NODE_ENV=production node .next/server.js",
         "lint": "next lint"
     },
     "dependencies": {
@@ -19,6 +19,7 @@
         "next": "12.3.1",
         "react": "18.2.0",
         "react-dom": "18.2.0",
+        "sharp": "^0.31.1",
         "typed.js": "^2.0.12"
     },
     "devDependencies": {
