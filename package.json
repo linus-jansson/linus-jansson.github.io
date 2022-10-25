@@ -6,8 +6,8 @@
     "scripts": {
         "dev": "nodemon -i build -x 'ts-node --esm src/server.ts'",
         "export": "next build && next export && touch ./out/.nojekyll && echo 'limpan.dev' > ./out/CNAME",
-        "build": "next build && ts --build src/server.ts",
-        "start": "NODE_ENV=production node src/server.js",
+        "build": "next build && tsc --project tsconfig.server.json",
+        "start": "NODE_ENV=production node build/server.js",
         "lint": "next lint"
     },
     "dependencies": {
