@@ -48,7 +48,7 @@ const Index: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Hey! I & apos;m Linus! </title>
+                <title>Hey! I&apos;m Linus! </title>
             </Head>
 
             < Header />
