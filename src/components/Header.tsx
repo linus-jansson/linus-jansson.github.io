@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import Typed from 'typed.js';
 
+import Background from '../images/background.jpg'
 
 const TypingEffect = (props: { text: Array<string> }) => {
     useEffect(() => {
@@ -40,7 +41,7 @@ const Header = () => {
             <div id="header" className={'h-screen relative  bg-cover bg-fixed bg-blend-darken flex justify-center'}>
                 <div style={{ zIndex: -1 }} className='brightness-[.35] absolute w-screen h-screen top-0 '>
                     <Image
-                        src='/img/background.jpg'
+                        src={Background}
                         layout='fill'
                         objectFit="cover"
                     />
