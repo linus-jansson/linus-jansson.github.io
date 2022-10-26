@@ -15,7 +15,7 @@ const dev = process.env.NODE_ENV !== 'production'
 const nextApp = next({ dev })
 const nextHandler = nextApp.getRequestHandler()
 
-// import Auth from './auth';
+import Auth from './Auth';
 
 nextApp
     .prepare()
@@ -26,14 +26,19 @@ nextApp
             extended: true
         }));
 
-        // server.get('/login', (req, res) => {
-        //     let auth = new Auth();
-        //     auth.login((result) => {
-        //         console.log(result)
-        //         return res.json(auth.isAuthenticated())
-        //     });
+        server.get('/login', (req, res) => {
+            let auth = new Auth();
+            let code: unknown = req.query.code
 
-        // });
+            if (code === undefined) {
+                return res.redirect(auth.REDIRECT_URI)
+            }
+
+            auth.login(code, () => { });
+
+            return res.status(204).json({ status: "check console" })
+
+        });
 
         /* Handle all requests through next */
         server.get("*", (req: Request, res: Response) => {
