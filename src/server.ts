@@ -26,18 +26,36 @@ nextApp
             extended: true
         }));
 
-        server.get('/login', (req, res) => {
+        server.get('/api/login', async (req: Request, res: Response) => {
+            console.log("New request to /login")
+            let auth = new Auth();
+            return res.status(200).json({ url: auth.REDIRECT_URI_DISCORD })
+        });
+
+        server.get('/api/login/callback', async (req: Request, res: Response) => {
+            console.log("New request to /login")
+
+            /* 
+                TODO:
+                    - If user logged in, redirect to some page
+                    - If error occured/not logged in, show error page
+            
+            */
             let auth = new Auth();
             let code: unknown = req.query.code
-
             if (code === undefined) {
-                return res.redirect(auth.REDIRECT_URI)
+                return res.redirect('/api/login')
             }
 
-            auth.login(code, () => { });
-
-            return res.status(204).json({ status: "check console" })
-
+            let result;
+            try {
+                result = await auth.login(code);
+            } catch (error) {
+                console.log(result)
+                // console.log(error)
+            }
+            console.log("after try catch")
+            res.status(200).json({ status: result.status, data: result.data })
         });
 
         /* Handle all requests through next */
