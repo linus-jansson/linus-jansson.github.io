@@ -11,12 +11,15 @@ const Login = () => {
     }
 
     return (
-        <div className="w-screen h-screen flex justify-center">
-            <div className="w-12 h-12">
-                <button onClick={loginRedirect}>Login Button</button>
+        <div className='w-screen h-screen flex justify-center items-center'>
+            <div className="bg-slate-100 w-80 h-80 flex justify-around items-center flex-col rounded-lg">
+                <h1 className='text-3xl font-bold'>Login Page</h1>
+                <button onClick={loginRedirect} type='submit' className='p-1 rounded-lg bg-[#738adb] uppercase font-bold hover:shadow-lg duration-100'>
+                    <i className="fa-brands fa-discord"></i>
+                    Login using Discord
+                </button>
             </div>
         </div>
-
     )
 }
 

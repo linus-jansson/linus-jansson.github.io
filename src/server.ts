@@ -33,7 +33,7 @@ nextApp
         });
 
         server.get('/api/login/callback', async (req: Request, res: Response) => {
-            console.log("New request to /login")
+            console.log("New request to /login/callback")
 
             /* 
                 TODO:
