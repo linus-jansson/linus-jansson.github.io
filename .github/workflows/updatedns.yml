@@ -1,0 +1,20 @@
+name: Update DNS record for limpan.dev
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Build Docker image
+        env:
+          LOOPIA_API_USERNAME: ${{ secrets.LOOPIA_API_USERNAME }}
+          LOOPIA_API_PASSWORD: ${{ secrets.LOOPIA_API_PASSWORD }}
+        run: docker build --file DNS/Dockerfile --tag jansson/loopiadns --build-arg LOOPIA_API_USERNAME --build-arg LOOPIA_API_PASSWORD .
