@@ -54,6 +54,7 @@ const Card = (props: portfolioCardProps) => {
                         alt={props.title}
                         width={480}
                         height={270}
+                        className="rounded-lg"
                     />
                 </Link>
             </div>

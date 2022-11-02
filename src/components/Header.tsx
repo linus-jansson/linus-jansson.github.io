@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react'
+'use client';
+
+import { useEffect } from 'react'
 import Socials from './Socials'
 import Image from 'next/image'
 
 import Typed from 'typed.js';
+
 const TypingEffect = (props: { text: Array<string> }) => {
     useEffect(() => {
 
@@ -36,18 +39,19 @@ const Header = () => {
     return (
         <>
             <div id="header" className={'h-screen relative  bg-cover bg-fixed bg-blend-darken flex justify-center'}>
-                <div style={{ zIndex: -1 }} className='brightness-[.35] absolute w-screen h-screen top-0 '>
+                <div style={{ zIndex: -1 }} className='brightness-[.35] fixed w-screen h-screen top-0 '>
                     <Image
                         src='/images/background.jpg'
                         alt='Picture of a IDE with ruby code'
-                        layout='fill'
+                        fill
+                        className='object-cover'
                     />
                 </div>
 
                 <div className="z-1 w-full sm:w-9/12 h-screen ml-10 flex flex-col justify-center text-left">
                     <p className='text-4xl sm:text-5xl font-bold text-textPrimary pb-5'>I&apos;m <TypingEffect text={["Linus Jansson", "A Software Developer"]} /></p>
 
-                    <p className="text-textPrimary text-xl sm:text-xl pb-5">Self-learned developer from Sweden</p>
+                    <p className="text-textPrimary text-xl sm:text-xl pb-5">Self thaught developer from Sweden</p>
 
                     <Socials {...socialProps} />
 

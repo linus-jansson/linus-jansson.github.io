@@ -1,7 +1,4 @@
-import type { NextComponentType } from 'next'
-
 import Socials from './Socials'
-
 
 const Footer = () => {
     const SocialProps = {

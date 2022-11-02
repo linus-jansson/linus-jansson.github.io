@@ -1,17 +1,8 @@
-import type { NextPage, NextComponentType } from 'next'
+'use client';
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-import Head from 'next/head'
-import Image from 'next/image'
-
-import Header from '../components/Header'
-import About from '../components/About'
-import Expertise from '../components/Expertise'
-import Portfolio from '../components/Portfolio'
-import Footer from '../components/Footer'
-
-const ScrollTop: NextComponentType = () => {
+const ScrollTop = () => {
     const [showScroll, setShowScroll] = useState(false)
 
 
@@ -38,35 +29,8 @@ const ScrollTop: NextComponentType = () => {
                     <i className="text-zinc-50 text-lg fa fa-arrow-up fa-bounce" > </i>
                 </button>
             }
-
-
         </>
     )
 }
 
-const Index: NextPage = () => {
-    return (
-        <>
-            <Head>
-                <title>Hey! I&apos;m Linus! </title>
-            </Head>
-
-            < Header />
-
-            <main id="main" >
-                <About />
-
-                <Expertise />
-
-                <Portfolio />
-
-            </main>
-
-            <Footer />
-
-            <ScrollTop />
-        </>
-    )
-}
-
-export default Index
+export default ScrollTop
