@@ -41,7 +41,6 @@ const Header = () => {
                         src='/images/background.jpg'
                         alt='Picture of a IDE with ruby code'
                         layout='fill'
-                        objectFit="cover"
                     />
                 </div>
 
