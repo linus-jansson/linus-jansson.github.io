@@ -18,7 +18,7 @@ RUN npm install
 COPY public/ ./public/
 COPY src/ ./src/
 
-EXPOSE 3000
+EXPOSE 8000
 
 RUN npm run build
 
