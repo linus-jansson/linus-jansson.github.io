@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useLayoutEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { NextComponentType } from 'next'
 
 
-const portfolio_items: Array<object> = [
+const portfolio_items: Array<portfolioCardProps> = [
     {
         title: "Pizzeria Rafiki",
         description: "Frontend project",
@@ -39,7 +38,7 @@ interface portfolioCardProps {
     description: string,
     image: string,
     repo?: string,
-    website?: string
+    website: string
 }
 
 const Card = (props: portfolioCardProps) => {
@@ -106,8 +105,8 @@ const Portfolio: NextComponentType = () => {
                                     title={item.title}
                                     description={item.description}
                                     image={item.image}
-                                    website={item?.website}
-                                    repo={item?.repo}
+                                    website={item.website}
+                                    repo={item.repo}
                                 />
                             )
                         })
