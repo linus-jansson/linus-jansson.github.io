@@ -30,9 +30,11 @@ export default function HeaderComponent() {
 
         const typed = new Typed(TypedElement.current, {
             strings: [
-                "Full stack developer",
-                "Front-end developer",
-                "React Developer",
+                "I am Linus",
+                "I am Linus",
+                "I am Linus",
+                "I am Linus",
+
             ],
             startDelay: 300,
             typeSpeed: 100,
@@ -55,13 +57,15 @@ export default function HeaderComponent() {
                 <noscript>
                     <p className='text-slate-200 text-3xl font-bold'>Hello I am Linus</p>
                 </noscript>
-                <p className='text-slate-200 font-bold'>Just A few sentences [...]</p>
-                <p className='text-slate-50 font-thin'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo illo pariatur sapiente accusamus obcaecati nisi doloribus animi consequuntur ab similique fugit velit, quos dolores quam tenetur adipisci hic earum!</p>
+                <p className='text-slate-200 font-bold'>I'm a {new Date().getFullYear() - 2003}yr old software developer from Sweden</p>
+                <p className='text-slate-50 font-thin'>
+                    I started development back in 2015 by making personal websites for game servers I was playing around with. Software development is in the familiy so naturally I got a passion for it. Later on I went to NTI-gymnasiet, a high school which has tech in focus, where I specialized in sofware development. Now I usually work on small projects on my spare time which are open-source and avaliable here!
+                </p>
             </div>
-            <div id='links' className='hidden md:flex md:flex-col text-slate-100 text-lg uppercase font-thin hidden'>
-                <a href="#projects" className='md:duration-100 md:hover:before:content-["->"] md:hover:rose-600'> Projects</a>
-                <a href="#timeline" className='md:duration-100 md:hover:before:content-["->"] md:hover:rose-600'> Timeline</a>
-                <a href="#" className='md:duration-100 md:hover:before:content-["->"] md:hover:text-slate-500'> My knowledge</a>
+            <div id='links' className='hidden md:flex md:flex-col text-slate-100 text-lg font-thin uppercase'>
+                <a href="#projects" className='duration-100 md:hover:before:content-["->"] md:hover:text-rose-600 tracking-widest'> Projects</a>
+                {/* <a href="#timeline" className='duration-100 md:hover:before:content-["->"] md:hover:text-rose-600 tracking-widest'> Timeline</a>
+                <a href="#" className='duration-100 md:hover:before:content-["->"] md:hover:text-rose-600 tracking-widest'> My knowledge</a> */}
             </div>
             <div id='socials' className='flex flex-wrap pt-4'>
                 <Socials link="https://www.github.com/linus-jansson" icon={FaGithub} icontext='Github' />
@@ -69,6 +73,6 @@ export default function HeaderComponent() {
                 <Socials link="https://discord.com/users/322015089529978880" icon={FaDiscord} icontext='Discord' />
                 <Socials link="mailto:contact@limpan.dev" icon={FaEnvelope} icontext='Mail Me' />
             </div>
-        </div>
+        </div >
     )
 }
