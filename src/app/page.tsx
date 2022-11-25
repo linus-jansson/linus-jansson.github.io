@@ -68,7 +68,7 @@ const Data = {
         {
             type: 'Fullstack',
             title: 'Adminnärvaro',
-            desc: 'A fulllstack web application for seeing the attendence of the personeel at NTI gymnasiet. Built with Next.js, tailwindcss and Mongodb. The application also has an API that is used by a raspberry pico W to update the attendence for a person.',
+            desc: 'A fulllstack web application for seeing the attendence of the personeel at NTI gymnasiet. Built with Next.js, Socket.io, Express.js, tailwindcss and Mongodb. The application also has an API that is used by a raspberry pico W to update the attendence for a person with a button press.',
             page_link: 'https://narvaro.ntig.net/'
         },
     ],
@@ -82,16 +82,15 @@ export default function IndexPage() {
             <div className='md:hidden z-50 sticky shadow-2xl w-screen top-0 bg-rose-600 p-4 flex flex-row justify-around'>
                 <a href="#start">About Me</a>
                 <a href="#projects">Projects</a>
-                <a href="#timeline">Timeline</a>
-                <a href="#">My knowledge</a>
+                {/* <a href="#timeline">Timeline</a>
+                <a href="#">My knowledge</a> */}
             </div>
             <div id='start' className='flex flex-col scroll-mt-12 md:flex-row md:justify-between pt-4'>
                 <Header />
                 <div className='px-4 md:ml-auto md:pr-24 md:pl-48 md:pt-24 mb-12 w-full md:w-1/2 flex flex-col'>
-                    <h1 className='text-slate-100 text-3xl font-bold uppercase text-center'>My Projects</h1>
+                    <h1 className='text-slate-100 text-3xl font-bold uppercase tracking-widest text-center'>My Recent Projects</h1>
                     <div id='projects'>
                         {Data.projects.map((project, index) => {
-
                             return (
                                 <PortfolioCard
                                     key={index}
@@ -106,7 +105,7 @@ export default function IndexPage() {
 
 
                     </div>
-                    <div id='timeline' className='p-12'>
+                    {/* <div id='timeline' className='p-12'>
                         <h1 className='text-slate-100 text-3xl font-bold uppercase text-center'>My Timeline</h1>
                         <div>
                             <TimelineCard title="test">
@@ -128,7 +127,7 @@ export default function IndexPage() {
                                 <p>test</p>
                             </TimelineCard>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
             </div>
