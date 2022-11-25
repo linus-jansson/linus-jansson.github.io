@@ -120,6 +120,7 @@ export default function IndexPage() {
                                 <p>I am currently studying to become a <i>"Gymnasieingenjör"</i> at NTI-gymnasiet, an additional year to high shool which prepares me to work in software development.</p>
                             </TimelineCard>
                         </div>
+                        <p className='text-center text-zinc-600 font-thin'>Want to Hire me? <a href='mailto:contact@limpan.dev' className='underline'>Hit me up!</a></p>
                     </div>
                 </div>
 
