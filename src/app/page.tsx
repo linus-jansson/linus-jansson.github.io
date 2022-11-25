@@ -1,37 +1,30 @@
 import Link from 'next/link'
 import styles from './timeline.module.css'
-import { FaGithub, FaLink, FaLinkedin, FaDiscord, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLink } from 'react-icons/fa';
+import Header from './Header'
 
-const PortfolioCard = () => {
+const PortfolioCard = ({ type, title, desc, github, page_link }:
+    {
+        type: string,
+        title: string,
+        desc: string,
+        github?: string,
+        page_link?: string
+    }
+) => {
     return (
-        <Link href='https://example.com'>
-            <div className='bg-zinc-800 p-4 w-full transition rounded-lg md:hover:scale-125 md:shadow-lg md:hover:shadow-lg md:hover:opacity-100 duration-300 my-4'>
-                <p className='text-slate-100 uppercase'>Project Type</p>
-                <p className='text-slate-100'>Project Name</p>
-                <p className='text-slate-100'>Project Description</p>
-                <p className='text-slate-100'>Project Description</p>
+        <div className='bg-zinc-800 p-4 w-full transition rounded-lg md:hover:scale-125 md:shadow-lg md:hover:shadow-lg md:hover:opacity-100 duration-300 my-4'>
+            <p className='text-slate-100 uppercase tracking-widest font-thin my-2'>{type}</p>
+            <p className='text-slate-100 text-2xl font-bold mb-4'>{title}</p>
+            <p className='text-slate-100 pb-4'>{desc}</p>
+            <div className='flex flex-row'>
+                {github && <Link href={github} className='pr-4'> <FaGithub size='1.5em' color='whitesmoke' /> </Link>}
+                {page_link && <Link href={page_link}> <FaLink size='1.5em' color='whitesmoke' /> </Link>}
             </div>
-        </Link>
+        </div>
     )
 }
 
-const Socials = (props: any) => {
-    return (
-        <>
-            <Link href={props.link} target='_blank' className='text-slate-100 md:text-sm hover:text-slate-300 duration-100 pr-4'>
-                <span className='md:mr-2 md:inline-block md:align-middle'>
-                    <props.icon size="2em" />
-                </span>
-                <span className='hidden md:mr-2 md:inline-block md:align-middle'>
-                    {props.icontext}
-                </span>
-                {/* <span className='hidden md:mr-2 md:inline-block md:align-middle'>
-                    <FaLink />
-                </span> */}
-            </Link>
-        </>
-    )
-}
 
 const Sidebar = () => {
     return (<></>)
@@ -49,8 +42,41 @@ const TimelineCard = ({ title, children }: { title: string, children: React.Reac
     )
 }
 
+const Data = {
+    projects: [
+        {
+            type: 'Frontend',
+            title: 'Pizzeria Rafiki',
+            desc: '',
+            github: 'https://github.com/NTIG-Uppsala/pizzeria-rafiki/',
+            page_link: 'https://ntig-uppsala.github.io/pizzeria-rafiki/'
+        },
+        {
+            type: 'Frontend',
+            title: 'Frisör Saxé',
+            desc: '',
+            github: 'https://github.com/NTIG-Uppsala/Frisor-Saxe/',
+            page_link: 'https://ntig-uppsala.github.io/Frisor-Saxe/'
+        },
+        {
+            type: 'Frontend',
+            title: 'Florist Blåklinten',
+            desc: 'A website for a flowershop. Uses selenium tests for unit tests and is deployed using Github Workflows on Github Pages',
+            github: 'https://github.com/NTIG-Uppsala/florist-blaklinten/',
+            page_link: 'https://ntig-uppsala.github.io/florist-blaklinten/'
+        },
+        {
+            type: 'Fullstack',
+            title: 'Adminnärvaro',
+            desc: 'A fulllstack web application for seeing the attendence of the personeel at NTI gymnasiet. Built with Next.js, tailwindcss and Mongodb. The application also has an API that is used by a raspberry pico W to update the attendence for a person.',
+            page_link: 'https://narvaro.ntig.net/'
+        },
+    ],
+    timeline: [{}]
+}
 
 export default function IndexPage() {
+
     return (
         <>
             <div className='md:hidden z-50 sticky shadow-2xl w-screen top-0 bg-rose-600 p-4 flex flex-row justify-around'>
@@ -60,46 +86,28 @@ export default function IndexPage() {
                 <a href="#">My knowledge</a>
             </div>
             <div id='start' className='flex flex-col scroll-mt-12 md:flex-row md:justify-between pt-4'>
-
-                <div className='w-11/12 md:w-1/2 mx-auto p-4 md:pl-24 text-left md:h-screen md:flex md:flex-col md:justify-between md:fixed md:top-0 md:left-0 md:pt-24 md:pb-12'>
-
-                    <div id='about'>
-                        <p className='text-slate-200 text-3xl font-bold'>Hello <i>typed.js?</i></p>
-                        <p className='text-slate-200 font-bold'>Just A few sentences [...]</p>
-                        <p className='text-slate-50 font-thin'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo illo pariatur sapiente accusamus obcaecati nisi doloribus animi consequuntur ab similique fugit velit, quos dolores quam tenetur adipisci hic earum!</p>
-                    </div>
-                    <div id='links' className='hidden md:flex md:flex-col text-slate-100 text-lg uppercase font-thin hidden'>
-                        <a href="#projects" className='md:duration-100 md:hover:before:content-["->"] md:hover:text-slate-500'> Projects</a>
-                        <a href="#timeline" className='md:duration-100 md:hover:before:content-["->"] md:hover:text-slate-500'> Timeline</a>
-                        <a href="#" className='md:duration-100 md:hover:before:content-["->"] md:hover:text-slate-500'> My knowledge</a>
-                    </div>
-                    <div id='socials' className='flex flex-wrap pt-4'>
-                        <Socials link="https://www.github.com/linus-jansson" icon={FaGithub} icontext='Github' />
-                        <Socials link="https://www.linkedin.com/in/linus-jansson-94715924a/" icon={FaLinkedin} icontext='LinkedIn' />
-                        <Socials link="https://discord.com/users/322015089529978880" icon={FaDiscord} icontext='Discord' />
-                        <Socials link="mailto:contact@limpan.dev" icon={FaEnvelope} icontext='Mail Me' />
-                    </div>
-                </div>
-
+                <Header />
                 <div className='px-4 md:ml-auto md:pr-24 md:pl-48 md:pt-24 mb-12 w-full md:w-1/2 flex flex-col'>
-                    <h1 className='text-slate-100 text-5xl text-center'>My Projects</h1>
+                    <h1 className='text-slate-100 text-3xl font-bold uppercase text-center'>My Projects</h1>
                     <div id='projects'>
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
-                        <PortfolioCard />
+                        {Data.projects.map((project, index) => {
+
+                            return (
+                                <PortfolioCard
+                                    key={index}
+                                    title={project.title}
+                                    type={project.type}
+                                    desc={project.desc}
+                                    github={project?.github}
+                                    page_link={project?.page_link}
+                                />
+                            )
+                        })}
+
+
                     </div>
                     <div id='timeline' className='p-12'>
-                        <h1 className='text-slate-100 text-5xl text-center'>My Timeline</h1>
+                        <h1 className='text-slate-100 text-3xl font-bold uppercase text-center'>My Timeline</h1>
                         <div>
                             <TimelineCard title="test">
                                 <p>test</p>
@@ -119,7 +127,6 @@ export default function IndexPage() {
                             <TimelineCard title="test">
                                 <p>test</p>
                             </TimelineCard>
-
                         </div>
                     </div>
                 </div>
