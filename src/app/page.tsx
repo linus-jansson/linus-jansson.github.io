@@ -88,8 +88,7 @@ export default function IndexPage() {
             <div className='md:hidden z-50 sticky shadow-2xl w-screen top-0 bg-rose-700 p-4 flex flex-row justify-around xs:flex-col'>
                 <a href="#start" className='text-slate-100 hover:text-slate-300 duration-100 font-bold uppercase tracking-widest hover:underline'>About Me</a>
                 <a href="#projects" className='text-slate-100 hover:text-slate-400 duration-100 font-bold uppercase tracking-widest hover:underline'>Projects</a>
-                {/* <a href="#timeline">Timeline</a>
-                <a href="#">My knowledge</a> */}
+                <a href="#timeline" className='text-slate-100 hover:text-slate-400 duration-100 font-bold uppercase tracking-widest hover:underline'>Timeline</a>
             </div>
             <div id='start' className='scroll-mt-12 flex flex-col lg:flex-row pt-4'>
                 <Header />
