@@ -33,9 +33,9 @@ export default function HeaderComponent() {
 
         const typed = new Typed(TypedElement.current, {
             strings: [
-                " World!",
-                "! I'm Linus",
-                "! A Software Developer",
+                "Hello world!",
+                "I'm Linus Jansson",
+                "a Software Developer",
             ],
             startDelay: 300,
             typeSpeed: 100,
@@ -54,7 +54,7 @@ export default function HeaderComponent() {
         <div className='w-11/12 md:w-1/2 mx-auto p-4 md:pl-24 text-left md:h-screen md:flex md:flex-col md:justify-between md:fixed md:top-0 md:left-0 md:pt-24 md:pb-12'>
 
             <div id='about' className="pt-26">
-                <p className='text-slate-200 text-3xl font-bold'>Hello <span ref={TypedElement}></span></p>
+                <p className='text-slate-200 text-3xl font-bold'><span ref={TypedElement}></span></p>
                 <noscript>
                     <p className='text-slate-200 text-3xl font-bold'>Hello I am Linus</p>
                 </noscript>
