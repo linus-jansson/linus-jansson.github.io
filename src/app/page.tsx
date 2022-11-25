@@ -18,17 +18,11 @@ const PortfolioCard = ({ type, title, desc, github, page_link }:
             <p className='text-slate-100 text-2xl font-bold mb-4'>{title}</p>
             <p className='text-slate-100 pb-4'>{desc}</p>
             <div className='flex flex-row'>
-                {github && <Link href={github} className='pr-4'> <FaGithub size='1.5em' color='whitesmoke' /> </Link>}
-                {page_link && <Link href={page_link}> <FaLink size='1.5em' color='whitesmoke' /> </Link>}
+                {github && <Link href={github} className='pr-4'> <FaGithub className="hover:fill-rose-600 duration-100" size='1.5em' color='whitesmoke' /> </Link>}
+                {page_link && <Link href={page_link}> <FaLink className="hover:fill-rose-600 duration-100" size='1.5em' color='whitesmoke' /> </Link>}
             </div>
         </div>
     )
-}
-
-
-const Sidebar = () => {
-    return (<></>)
-
 }
 
 const TimelineCard = ({ title, children }: { title: string, children: React.ReactNode }) => {
@@ -79,13 +73,13 @@ export default function IndexPage() {
 
     return (
         <>
-            <div className='md:hidden z-50 sticky shadow-2xl w-screen top-0 bg-rose-600 p-4 flex flex-row justify-around'>
-                <a href="#start">About Me</a>
-                <a href="#projects">Projects</a>
+            <div className='md:hidden z-50 sticky shadow-2xl w-screen top-0 bg-rose-700 p-4 flex flex-row justify-around xs:flex-col'>
+                <a href="#start" className='text-slate-100 hover:text-slate-300 duration-100 font-bold uppercase tracking-widest hover:underline'>About Me</a>
+                <a href="#projects" className='text-slate-100 hover:text-slate-400 duration-100 font-bold uppercase tracking-widest hover:underline'>Projects</a>
                 {/* <a href="#timeline">Timeline</a>
                 <a href="#">My knowledge</a> */}
             </div>
-            <div id='start' className='flex flex-col scroll-mt-12 md:flex-row md:justify-between pt-4'>
+            <div id='start' className='scroll-mt-12 flex flex-col lg:flex-row pt-4'>
                 <Header />
                 <div className='px-4 md:ml-auto md:pr-24 md:pl-48 md:pt-24 mb-12 w-full md:w-1/2 flex flex-col'>
                     <h1 className='text-slate-100 text-3xl font-bold uppercase tracking-widest text-center'>My Recent Projects</h1>
@@ -131,6 +125,7 @@ export default function IndexPage() {
                 </div>
 
             </div>
+            <div className='fixed bottom-0 left-0 w-screen bg-black/90 blur-lg h-6'></div>
 
         </>
     )
