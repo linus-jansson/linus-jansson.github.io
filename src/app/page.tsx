@@ -114,10 +114,10 @@ export default function IndexPage() {
                         <h1 className='text-slate-100 text-3xl font-bold uppercase text-center'>My Timeline</h1>
                         <div>
                             <TimelineCard title="Teknikprogrammet (TE)">
-                                <p>I went to NTI-gymnasiet, a high school which has it's main focus in tech. I graduated in June 2022.</p>
+                                <p>I went to NTI-gymnasiet, a high school which has it's main focus in tech where from I graduated in June 2022.</p>
                             </TimelineCard>
                             <TimelineCard title="Gymnasieingenjör (T4)">
-                                <p>I am currently studying to become a <i>"Gymnasieingenjör"</i> at NTI-gymnasiet. An additional year to high shool which prepares us for a work in software development.</p>
+                                <p>I am currently studying to become a <i>"Gymnasieingenjör"</i> at NTI-gymnasiet, an additional year to high shool which prepares me to work in software development.</p>
                             </TimelineCard>
                         </div>
                     </div>
