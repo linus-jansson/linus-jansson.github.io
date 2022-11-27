@@ -4,23 +4,27 @@ import { FaGithub, FaLink } from 'react-icons/fa';
 import Header from './Header'
 import Data from './data'
 
-const PortfolioCard = ({ type, title, desc, github, page_link }:
+const PortfolioCard = ({ type, title, desc, github, page_link, latest_change }:
     {
         type: string,
         title: string,
         desc: string,
         github?: string,
-        page_link?: string
+        page_link?: string,
+        latest_change?: Date
     }
 ) => {
     return (
-        <div className='bg-zinc-800 p-4 w-full transition rounded-lg md:hover:scale-125 md:shadow-lg md:hover:shadow-lg md:hover:opacity-100 duration-300 my-4'>
+
+        <div className='bg-zinc-800 p-4 w-full transition rounded-lg md:hover:scale-110 md:shadow-lg md:hover:shadow-2xl md:hover:!opacity-100 md:group-hover:opacity-50 duration-300 my-4'>
+            {/* https://stackoverflow.com/questions/65170132/tailwindcss-use-hover-over-group-hover */}
             <p className='text-slate-100 uppercase tracking-widest font-thin my-2'>{type}</p>
             <p className='text-rose-600 text-2xl font-bold mb-4'>{title}</p>
             <p className='text-zinc-400 pb-4'>{desc}</p>
             <div className='flex flex-row'>
                 {github && <Link href={github} className='pr-4'> <FaGithub className="hover:fill-rose-600 duration-100" size='1.5em' color='whitesmoke' /> </Link>}
                 {page_link && <Link href={page_link}> <FaLink className="hover:fill-rose-600 duration-100" size='1.5em' color='whitesmoke' /> </Link>}
+
             </div>
         </div>
     )
@@ -93,9 +97,11 @@ export default function IndexPage() {
             <div id='start' className='scroll-mt-12 flex flex-col lg:flex-row pt-4'>
                 {/* Sidebar with links and about text */}
                 <Header />
-                <div className='px-4 md:ml-auto md:pr-24 md:pl-48 md:pt-24 mb-12 w-full md:w-1/2 flex flex-col'>
+                <div className='px-4 md:ml-auto md:pr-24 md:pl-48 md:pt-24 mb-12 w-full md:w-1/2 flex flex-col max-w-[1024px] justify-center'>
                     {/* Projects section */}
-                    <PortfolioSection />
+                    <div className='group'>
+                        <PortfolioSection />
+                    </div>
                     {/* Timeline section */}
                     <TimelineSection />
                 </div>
