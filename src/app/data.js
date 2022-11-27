@@ -21,7 +21,7 @@ export default {
         {
             type: 'Frontend',
             title: 'Pizzeria Rafiki',
-            desc: 'A website for a pizzeria. Has automated tests using Github workflos and selenium. Deployed using Github pages',
+            desc: 'A website for a pizzeria. Has automated tests using Github workflows and selenium. Deployed using Github pages',
             github: 'https://github.com/NTIG-Uppsala/pizzeria-rafiki/',
             page_link: 'https://ntig-uppsala.github.io/pizzeria-rafiki/'
         },

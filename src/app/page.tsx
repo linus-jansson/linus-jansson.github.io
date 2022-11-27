@@ -72,10 +72,10 @@ const TimelineSection = () => {
                 <h1 className='text-slate-100 text-3xl font-bold uppercase text-center tracking-widest'>My Timeline</h1>
                 <div>
                     <TimelineCard title="Teknikprogrammet (TE)">
-                        <p>I went to NTI-gymnasiet, a high school which has it's main focus in tech where from I graduated in June 2022.</p>
+                        <p>I went to NTI-gymnasiet, a high school which has its focus in tech from where I graduated in June 2022.</p>
                     </TimelineCard>
                     <TimelineCard title="Gymnasieingenjör (T4)">
-                        <p>I am currently studying to become a <i>"Gymnasieingenjör"</i> at NTI-gymnasiet, an additional year to high shool which prepares me to work in software development.</p>
+                        <p>I am currently studying to become a <i>"Gymnasieingenjör"</i> at NTI-gymnasiet, an additional year to high school which prepares me to work in software development.</p>
                     </TimelineCard>
                 </div>
                 <p className='text-center text-zinc-600 font-thin'>Want to Hire me? <a href='mailto:contact@limpan.dev' className='underline'>Hit me up!</a></p>

@@ -60,7 +60,7 @@ export default function HeaderComponent() {
                 </noscript>
                 <p className='text-slate-200 font-bold md:py-1'>I'm a {new Date().getFullYear() - 2003}yr old software developer from Sweden!</p>
                 <p className='text-zinc-400 font-thin md:py-3'>
-                    I started my software development journey back in 2015 by making personal websites for game servers I was playing around with. Software development is in the family so naturally I got a passion for it. I am currently studying at NTI-gymnasiet, a high school which has tech in focus, where I specialize in sofware development and software design.
+                    I started my software development journey back in 2015 by making personal websites for game servers I was playing around with. Software development is in the family so naturally I got a passion for it. I am currently studying at NTI-gymnasiet, a high school which has tech in focus, where I specialize in software development and software design.
                 </p>
                 <p className='text-zinc-400 font-thin'>I also work on smaller projects on my spare time which are open-source and avaliable <a href="https://github.com/linus-jansson" className="duration-100 hover:text-rose-600 underline font-bold" target='_blank'>here</a>!</p>
             </div>
