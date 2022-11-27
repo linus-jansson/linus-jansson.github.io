@@ -34,7 +34,7 @@ const PortfolioSection = () => {
     return (
         <>
             <h1 className='text-slate-100 text-3xl font-bold uppercase tracking-widest text-center'>My Recent Projects</h1>
-            <div id='projects'>
+            <div id='projects' className='group'>
                 {Data.projects.map((project, index) => {
                     return (
                         <PortfolioCard
@@ -99,9 +99,7 @@ export default function IndexPage() {
                 <Header />
                 <div className='px-4 md:ml-auto md:pr-24 md:pl-48 md:pt-24 mb-12 w-full md:w-1/2 flex flex-col max-w-[1024px] justify-center'>
                     {/* Projects section */}
-                    <div className='group'>
-                        <PortfolioSection />
-                    </div>
+                    <PortfolioSection />
                     {/* Timeline section */}
                     <TimelineSection />
                 </div>
