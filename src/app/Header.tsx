@@ -59,10 +59,10 @@ export default function HeaderComponent() {
                     <p className='text-slate-200 text-3xl font-bold'>Hello I am Linus</p>
                 </noscript>
                 <p className='text-slate-200 font-bold md:py-1'>I'm a {new Date().getFullYear() - 2003}yr old software developer from Sweden!</p>
-                <p className='text-slate-50 font-thin md:py-3'>
+                <p className='text-zinc-500 font-thin md:py-3'>
                     I started my software development journey back in 2015 by making personal websites for game servers I was playing around with. Software development is in the familiy so naturally I got a passion for it. I am currently studying at NTI-gymnasiet, a high school which has tech in focus, where I specialize in sofware development and software design.
                 </p>
-                <p className='text-slate-50 font-thin'>I also work on smaller projects on my spare time which are open-source and avaliable <a href="https://github.com/linus-jansson" className="duration-100 hover:text-rose-600 underline font-bold" target='_blank'>here</a>!</p>
+                <p className='text-zinc-500 font-thin'>I also work on smaller projects on my spare time which are open-source and avaliable <a href="https://github.com/linus-jansson" className="duration-100 hover:text-rose-600 underline font-bold" target='_blank'>here</a>!</p>
             </div>
 
             <div id='links' className='hidden md:flex md:flex-col md:w-fit'>

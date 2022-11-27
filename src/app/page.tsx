@@ -15,8 +15,8 @@ const PortfolioCard = ({ type, title, desc, github, page_link }:
     return (
         <div className='bg-zinc-800 p-4 w-full transition rounded-lg md:hover:scale-125 md:shadow-lg md:hover:shadow-lg md:hover:opacity-100 duration-300 my-4'>
             <p className='text-slate-100 uppercase tracking-widest font-thin my-2'>{type}</p>
-            <p className='text-slate-100 text-2xl font-bold mb-4'>{title}</p>
-            <p className='text-slate-100 pb-4'>{desc}</p>
+            <p className='text-rose-600 text-2xl font-bold mb-4'>{title}</p>
+            <p className='text-zinc-400 pb-4'>{desc}</p>
             <div className='flex flex-row'>
                 {github && <Link href={github} className='pr-4'> <FaGithub className="hover:fill-rose-600 duration-100" size='1.5em' color='whitesmoke' /> </Link>}
                 {page_link && <Link href={page_link}> <FaLink className="hover:fill-rose-600 duration-100" size='1.5em' color='whitesmoke' /> </Link>}
@@ -111,7 +111,7 @@ export default function IndexPage() {
 
                     </div>
                     <div id='timeline' className='p-12'>
-                        <h1 className='text-slate-100 text-3xl font-bold uppercase text-center'>My Timeline</h1>
+                        <h1 className='text-slate-100 text-3xl font-bold uppercase text-center tracking-widest'>My Timeline</h1>
                         <div>
                             <TimelineCard title="Teknikprogrammet (TE)">
                                 <p>I went to NTI-gymnasiet, a high school which has it's main focus in tech where from I graduated in June 2022.</p>
