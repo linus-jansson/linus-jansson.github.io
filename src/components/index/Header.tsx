@@ -1,65 +1,29 @@
-"use client";
-import { useEffect, useRef } from "react";
 import Link from 'next/link';
-import Typed from 'typed.js';
 import { FaGithub, FaLinkedin, FaDiscord, FaEnvelope } from 'react-icons/fa';
+import TypedEffect from './TypedEffect';
 
 const Socials = (props: any) => {
     return (
-        <>
-            <Link href={props.link} target='_blank' className='text-slate-100 md:text-sm hover:text-rose-600 duration-100 pr-4 '>
-                <span className='md:mr-2 md:inline-block md:align-middle'>
-                    <props.icon size="2em" />
-                </span>
-                <span className='hidden md:mr-2 md:inline-block md:align-middle'>
-                    {props.icontext}
-                </span>
-                {/*
-                <span className='hidden md:mr-2 md:inline-block md:align-middle'>
-                    <FaLink />
-                </span> 
-                */}
-            </Link>
-        </>
+        <Link href={props.link} target='_blank' className='text-slate-100 md:text-sm hover:text-rose-600 duration-100 pr-4 '>
+            <span className='md:mr-2 md:inline-block md:align-middle'>
+                <props.icon size="2em" />
+            </span>
+            <span className='hidden md:mr-2 md:inline-block md:align-middle'>
+                {props.icontext}
+            </span>
+        </Link>
     )
 }
 
 
 export default function HeaderComponent() {
-    const TypedElement = useRef(null);
-
-    useEffect(() => {
-        if (!TypedElement.current) return;
-        const TypedOptions = {
-            strings: [
-                "alert('Hello world!'); ",
-                "I'm Linus Jansson",
-                "I'm a software developer",
-            ],
-            startDelay: 300,
-            typeSpeed: 100,
-            backSpeed: 100,
-            backDelay: 500,
-            contentType: 'null',
-            loop: true,
-            cursorChar: '_'
-
-        }
-        const typed = new Typed(TypedElement.current, TypedOptions);
-
-        // Destroying
-        return () => {
-            typed.destroy();
-        };
-    }, []);
-
     return (
         <div className='w-11/12 md:w-1/2 mx-auto p-4 md:pl-24 text-left md:h-screen md:flex md:flex-col md:justify-between md:fixed md:top-0 md:left-0 md:pt-24 md:pb-12'>
 
             <div id='about' className="pt-26">
-                <p className='text-slate-200 text-3xl font-bold'><span ref={TypedElement}></span></p>
+                <p className='text-slate-200 text-3xl font-bold'><TypedEffect /></p>
                 <noscript>
-                    <p className='text-slate-200 text-3xl font-bold'>Hello I am Linus</p>
+                    <p className='text-slate-200 text-3xl font-bold'>Hello! I am Linus Jansson</p>
                 </noscript>
                 <p className='text-slate-200 font-bold md:py-1'>I'm a {new Date().getFullYear() - 2003}yr old software developer from Sweden!</p>
                 <p className='text-zinc-400 font-thin md:py-3'>
