@@ -11,7 +11,7 @@ export default {
             title: 'Website builder',
             desc: 'A full stack application for creating websites which can be exported as a HTML file. Built with Next.js and Tailwindcss.',
             github: 'https://github.com/linus-jansson/webpage-builder',
-            page_link: 'https://webpage-builder-inky.vercel.app/',
+            page_link: 'https://webpage-builder-inky.vercel.app/'
         },
         {
             type: 'C# (ongoing)',
