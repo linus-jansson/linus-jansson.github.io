@@ -4,6 +4,7 @@ export default {
             type: 'Full stack',
             title: 'Adminnärvaro',
             desc: 'A full stack web application for seeing the attendence of the personeel at NTI gymnasiet. Built with Next.js, JWT, Socket.io, Express.js, tailwindcss and Mongodb. The application also has an API that is used by a raspberry pico W to update the attendence for a person with a button press.',
+            github: 'https://github.com/NTIG-Uppsala/admin-narvaro',
             page_link: 'https://narvaro.ntig.net/'
         },
         {
