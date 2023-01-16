@@ -64,7 +64,7 @@ const PortfolioSection = () => {
                             )
                         })}
                     </div>
-                    <p className='text-lg font-thin text-center text-slate-100'><a onClick={() => { setAmountToShow((prev) => prev + 2) }} className='underline duration-100 hover:cursor-pointer hover:text-rose-600'>Show more?</a></p>
+                    <p className='text-lg font-thin text-center text-slate-100'><a onClick={() => { setAmountToShow((prev) => prev + 2) }} className='underline duration-100 hover:cursor-pointer hover:text-rose-600'>Show more!</a></p>
                 </>
                 :
                 <p className='text-lg font-thin text-center text-slate-100'>Wait a minute...</p>
