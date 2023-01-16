@@ -56,7 +56,7 @@ export default {
         },
         {
             id: 7,
-            type: 'C# (ongoing)',
+            type: 'Python',
             title: 'btd6farmer',
             desc: 'A macro system for the game Bloons td 6. Uses Relies on OCR with tesseract and template matching with opencv for navigation. Made in python',
             github: 'https://github.com/NTIG-Uppsala/restaurang-kassa'
