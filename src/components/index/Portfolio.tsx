@@ -1,8 +1,6 @@
-"use client";
-import Data from '../../data'
 import Link from 'next/link'
 import { FaLink, FaGithub } from 'react-icons/fa'
-import { useState, useEffect } from 'react';
+import data from '../../data';
 
 const PortfolioCard = ({ type, title, desc, github, page_link, latest_change }:
     {
@@ -31,44 +29,26 @@ const PortfolioCard = ({ type, title, desc, github, page_link, latest_change }:
 }
 
 const PortfolioSection = () => {
-    const [amountToShow, setAmountToShow] = useState(3);
-    const [projects, setProjects] = useState([]);
-
-    useEffect(() => {
-        let cancel = false;
-        fetch(`/api/projects?min=0&max=${amountToShow - 1}`)
-            .then((res) => res.json())
-            .then((data) => {
-                if (cancel) return;
-                setProjects(data.projects);
-            });
-        return () => { cancel = true };
-    }, [amountToShow])
-
     return (
         <>
             <h1 className='text-3xl font-bold tracking-widest text-center uppercase text-slate-100'>My Recent Projects</h1>
-            {(projects.length > 0) ?
-                <>
-                    <div id='projects' className='group'>
-                        {projects.map((project: any) => {
-                            return (
-                                <PortfolioCard
-                                    key={project.id}
-                                    title={project.title}
-                                    type={project.type}
-                                    desc={project.desc}
-                                    github={project?.github}
-                                    page_link={project?.page_link}
-                                />
-                            )
-                        })}
-                    </div>
-                    <p className='text-lg font-thin text-center text-slate-100'><a onClick={() => { setAmountToShow((prev) => prev + 2) }} className='underline duration-100 hover:cursor-pointer hover:text-rose-600'>Show more!</a></p>
-                </>
-                :
-                <p className='text-lg font-thin text-center text-slate-100'>Wait a minute...</p>
-            }
+            <div id='projects' className='group'>
+                {data.projects.map((project: any) => {
+                    return (
+                        <PortfolioCard
+                            key={project.id}
+                            title={project.title}
+                            type={project.type}
+                            desc={project.desc}
+                            github={project?.github}
+                            page_link={project?.page_link}
+                        />
+                    )
+                })}
+            </div>
+            <p className='text-lg font-thin text-center text-slate-100'>
+                <a href='https://github.com/linus-jansson/' className='underline duration-100 hover:cursor-pointer hover:text-rose-600'>Show more!</a>
+            </p>
         </>
     )
 }
