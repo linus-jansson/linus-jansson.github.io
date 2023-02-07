@@ -47,7 +47,7 @@ const PortfolioSection = () => {
                 })}
             </div>
             <p className='text-lg font-thin text-center text-slate-100'>
-                <a href='https://github.com/linus-jansson/' className='underline duration-100 hover:cursor-pointer hover:text-rose-600'>Show more!</a>
+                <a href='https://github.com/linus-jansson/' className='underline duration-100 hover:cursor-pointer hover:text-rose-600'>See more!</a>
             </p>
         </>
     )
