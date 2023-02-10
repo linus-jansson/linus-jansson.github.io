@@ -22,12 +22,11 @@ const TypedEffect = () => {
             cursorChar: '_'
 
         }
+
         const typed = new Typed(TypedElement.current, TypedOptions);
 
-        // Destroying
-        return () => {
-            typed.destroy();
-        };
+        // Destroy typed when unmounted
+        return () => typed.destroy();
     }, []);
 
     return <span ref={TypedElement}></span>
