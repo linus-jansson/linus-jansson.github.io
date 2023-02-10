@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { FaLink, FaGithub } from 'react-icons/fa'
 import data from '../../data';
 
@@ -20,8 +19,8 @@ const PortfolioCard = ({ type, title, desc, github, page_link, latest_change }:
             <p className='mb-4 text-2xl font-bold text-rose-600'>{title}</p>
             <p className='pb-4 text-zinc-400'>{desc}</p>
             <div className='flex flex-row'>
-                {github && <Link href={github} className='pr-4'> <FaGithub className="duration-100 hover:fill-rose-600" size='1.5em' color='whitesmoke' /> </Link>}
-                {page_link && <Link href={page_link}> <FaLink className="duration-100 hover:fill-rose-600" size='1.5em' color='whitesmoke' /> </Link>}
+                {github && <a href={github} target="_blank" className='pr-4'> <FaGithub className="duration-100 hover:fill-rose-600" size='1.5em' color='whitesmoke' /> </a>}
+                {page_link && <a href={page_link} target="_blank"> <FaLink className="duration-100 hover:fill-rose-600" size='1.5em' color='whitesmoke' /> </a>}
 
             </div>
         </div>
