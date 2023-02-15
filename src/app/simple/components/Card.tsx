@@ -36,19 +36,19 @@ export default function MainCard() {
     const [settings, dispatch] = useReducer(SettingsReducer, initialSettings);
 
     const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-        if (!elementRef.current || !wrapperRef.current) return;
+        // return to avoid runtime error if elements arent rendered or window is undefined
+        if (!elementRef.current || 
+            !wrapperRef.current || 
+            typeof window === 'undefined') return;
 
-        /* Could be changable values */
-        let perspective = settings.perspective;
+        /* User changable values*/
+        const perspective = settings.perspective;
         const maxRotate = settings.maxRotation;
-        /* */
-        
+        /**/
 
         const mouseX = e.clientX;
-        const mouseY = e.clientY;
+        const mouseY = e.clientY;   
 
-        if (typeof window === 'undefined') return;
-        
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
 

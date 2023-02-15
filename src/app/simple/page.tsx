@@ -1,7 +1,2 @@
-import MainCard from './components/Card'
-
-export default function Page() {
-    return (
-        <MainCard/>
-    )
-}
+import MainCard from './components/Card'; 
+export default () => <MainCard/>;
