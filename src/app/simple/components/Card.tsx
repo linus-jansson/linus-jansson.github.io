@@ -68,7 +68,7 @@ export default function MainCard() {
     }
 
     return (
-        <div className="grid h-screen place-items-center"
+        <div className="grid h-screen place-items-center bg-gradient-to-br from-fuchsia-500/50 to-cyan-500/50"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             ref={wrapperRef}
@@ -100,12 +100,9 @@ export default function MainCard() {
                         </div>
                     </div>
                     <ul className="flex text-white">
-                        <li className="mr-2">link</li>
-                        <li className="mr-2">link</li>
-                        <li className="mr-2">link</li>
-                        <li className="mr-2">link</li>
-                        <li className="mr-2">link</li>
-                        <li className="mr-2">link</li>
+                        <li className="mr-2">linkIcon 1</li>
+                        <li className="mr-2">linkIcon 2</li>
+                        <li className="mr-2">linkIcon 3</li>
 
                     </ul>
                 </div>
