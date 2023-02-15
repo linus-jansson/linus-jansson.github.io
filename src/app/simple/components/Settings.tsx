@@ -10,9 +10,9 @@ function SettingsMenu({ settings, dispatch }
     return (
         <div className="flex flex-col p-2 mt-2 bg-gray-800 rounded-lg shadow-lg ">
             <label className="font-bold text-white">Perspective</label>
-            <input type="number" className="mb-2" value={settings.perspective} onChange={(e) => dispatch({ type:"perspectiveChange", value: parseInt(e.target.value, 10) })} />
+            <input type="number" className="mb-2" value={settings.perspective} onChange={(e) => dispatch({ type:"perspectiveChange", value: parseInt(e.target.value, 10) || 0 })} />
             <label className="font-bold text-white">Max Rotation</label>
-            <input type="number" value={settings.maxRotation} onChange={(e) => dispatch({ type:"maxRotationChange", value: parseInt(e.target.value, 10) })} />
+            <input type="number" value={settings.maxRotation} onChange={(e) => dispatch({ type:"maxRotationChange", value: parseInt(e.target.value, 10) || 0 })} />
         </div>
     )
 }
