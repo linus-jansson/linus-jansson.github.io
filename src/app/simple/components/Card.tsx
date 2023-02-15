@@ -1,11 +1,15 @@
 "use client";
 import { useRef, useReducer } from "react";
 import type { MouseEvent } from "react";
+import { FaGithub, FaLinkedin, FaDiscord, FaEnvelope } from 'react-icons/fa';
+
 
 import Image from "next/image";
 
 import SettingsButton from "./Settings";
 import TypedEffect from "../../../components/index/TypedEffect";
+
+import Socials from "../../../components/index/Socials";
 
 const initialSettings = {
     perspective: 1000,
@@ -79,7 +83,7 @@ export default function MainCard() {
     }
 
     return (
-        <div className="grid h-screen place-items-center bg-gradient-to-br from-fuchsia-500/50 to-cyan-500/50"
+        <div className="grid h-screen place-items-center bg-gradient-to-br from-fuchsia-500/25 to-cyan-500/25"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             ref={wrapperRef}
@@ -88,13 +92,16 @@ export default function MainCard() {
             <SettingsButton settings={settings} dispatch={dispatch} />
             <div 
                 ref={elementRef} 
-                className="w-1/4 p-4 rounded-lg shadow-2xl bg-gray-800/75"
+                className="w-1/3 p-4 rounded-lg shadow-2xl bg-gray-800/75"
             >   
                 <div className="flex flex-col justify-around h-full">
                     <h1 className="text-3xl font-bold text-white"><TypedEffect stringArry={[ "ABC", "XYZ", "123"]} /></h1>
                     <div className="flex flex-row justify-between w-full">
                         <div className="flex flex-col w-1/2 text-white">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit voluptatem maxime quo facere mollitia soluta incidunt molestiae hic, vel, ipsum, eos minus sequi veritatis eveniet numquam. Perferendis, necessitatibus aperiam.
+                            <p className='font-bold text-slate-200 md:py-1'>I'm a {new Date().getFullYear() - 2003}yr old software developer from Sweden!</p>
+                            <p className='font-thinner text-zinc-300 md:py-3'>
+                                I started my software development journey back in 2015 by making personal websites for game servers I was playing around with. Software development is in the family so naturally I got a passion for it. I am currently studying at NTI-gymnasiet, a high school which has tech in focus, where I specialize in software development and software design.
+                            </p>
                         </div>
                         <div>
                             <div>
@@ -114,11 +121,10 @@ export default function MainCard() {
                             </div>    
                         </div>
                     </div>
-                    <ul className="flex text-white">
-                        <li className="mr-2">linkIcon 1</li>
-                        <li className="mr-2">linkIcon 2</li>
-                        <li className="mr-2">linkIcon 3</li>
-
+                    <ul className="flex mt-2 text-white">
+                        <Socials link="https://www.github.com/linus-jansson" icon={FaGithub} icontext='Github' />
+                        <Socials link="https://www.linkedin.com/in/linus-jansson-94715924a/" icon={FaLinkedin} icontext='LinkedIn' />
+                        <Socials link="mailto:contact@limpan.dev" icon={FaEnvelope} icontext='Mail Me' />
                     </ul>
                 </div>
                 
