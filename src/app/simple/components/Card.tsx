@@ -1,15 +1,43 @@
 "use client";
-import { MouseEvent, useRef } from "react";
+import { useRef, useReducer } from "react";
+import type { MouseEvent } from "react";
+
+import SettingsButton from "./Settings";
+
+const initialSettings = {
+    perspective: 1000,
+    maxRotation: 45
+}
+
+const SettingsReducer = (state: any, action: any) => {
+    switch (action.type) {
+        case "perspectiveChange":
+            return {
+                ...state,
+                perspective: action.value
+            }
+        case "maxRotationChange":
+            return {
+                ...state,
+                maxRotation: action.value
+            }
+        default:
+            throw new Error("Invalid action Type");
+    }
+}
 
 export default function MainCard() {
     const elementRef = useRef<HTMLDivElement>(null);
     const wrapperRef = useRef<HTMLDivElement>(null);
+
+    const [settings, dispatch] = useReducer(SettingsReducer, initialSettings);
+
     const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
         if (!elementRef.current || !wrapperRef.current) return;
 
         /* Could be changable values */
-        const perspective = 1000;
-        const maxRotate = 45;
+        const perspective = settings.perspective;
+        const maxRotate = settings.maxRotation;
         /* */
         
 
@@ -20,7 +48,6 @@ export default function MainCard() {
         
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
-
 
         /* 
             Calculate rotation degree x&y depending on normalized 
@@ -45,6 +72,7 @@ export default function MainCard() {
             ref={wrapperRef}
             
         >
+            <SettingsButton settings={settings} dispatch={dispatch} />
             <div 
                 ref={elementRef} 
                 className="h-64 p-4 transition duration-300 bg-gray-800 rounded-lg shadow-2xl w-96"
