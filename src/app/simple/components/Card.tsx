@@ -2,6 +2,8 @@
 import { useRef, useReducer } from "react";
 import type { MouseEvent } from "react";
 
+import Image from "next/image";
+
 import SettingsButton from "./Settings";
 
 const initialSettings = {
@@ -75,9 +77,40 @@ export default function MainCard() {
             <SettingsButton settings={settings} dispatch={dispatch} />
             <div 
                 ref={elementRef} 
-                className="h-64 p-4 transition duration-300 bg-gray-800 rounded-lg shadow-2xl w-96"
-            >
-                <p className="text-white">Some content</p>
+                className="w-1/4 h-64 p-4 transition duration-300 bg-gray-800 rounded-lg shadow-2xl"
+            >   
+                <div className="flex flex-col justify-around h-full">
+                    <h1 className="text-3xl font-bold text-white">Title</h1>
+                    <div className="flex flex-row justify-between">
+                        <div className="flex flex-col text-white">
+                            <p>Some content</p>
+                            <p>Some content</p>
+                            <p>Some content</p>
+                            <p>Some content</p>
+                            <p>Some content</p>
+                            <p>Some content</p>
+                        </div>
+                        <div>
+                            <Image
+                                height={200}
+                                width={200}
+                                alt="Picture of computer"
+                                src={"/images/background.jpg"}
+                            />
+                        </div>
+                    </div>
+                    <ul className="flex text-white">
+                        <li className="mr-2">link</li>
+                        <li className="mr-2">link</li>
+                        <li className="mr-2">link</li>
+                        <li className="mr-2">link</li>
+                        <li className="mr-2">link</li>
+                        <li className="mr-2">link</li>
+
+                    </ul>
+                </div>
+                
+                
             </div>
         </div>
     )
