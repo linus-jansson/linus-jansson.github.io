@@ -5,6 +5,7 @@ import type { MouseEvent } from "react";
 import Image from "next/image";
 
 import SettingsButton from "./Settings";
+import TypedEffect from "../../../components/index/TypedEffect";
 
 const initialSettings = {
     perspective: 1000,
@@ -90,18 +91,27 @@ export default function MainCard() {
                 className="w-1/4 p-4 rounded-lg shadow-2xl bg-gray-800/75"
             >   
                 <div className="flex flex-col justify-around h-full">
-                    <h1 className="text-3xl font-bold text-white">Title</h1>
+                    <h1 className="text-3xl font-bold text-white"><TypedEffect stringArry={[ "ABC", "XYZ", "123"]} /></h1>
                     <div className="flex flex-row justify-between w-full">
                         <div className="flex flex-col w-1/2 text-white">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit voluptatem maxime quo facere mollitia soluta incidunt molestiae hic, vel, ipsum, eos minus sequi veritatis eveniet numquam. Perferendis, necessitatibus aperiam.
                         </div>
                         <div>
-                            <Image
-                                height={175}
-                                width={175}
-                                alt="Picture of computer"
-                                src={"/images/background.jpg"}
-                            />
+                            <div>
+                                <Image
+                                    height={175}
+                                    width={175}
+                                    alt="Picture of computer"
+                                    src={"/images/background.jpg"}
+                                />
+                            </div>
+                            <div>
+                                <ul className="text-right text-white">
+                                    <li className="mr-2">link 1</li>
+                                    <li className="mr-2">link 2</li>
+                                    <li className="mr-2">link 3</li>
+                                </ul>
+                            </div>    
                         </div>
                     </div>
                     <ul className="flex text-white">

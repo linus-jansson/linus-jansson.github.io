@@ -2,17 +2,13 @@
 import Typed from 'typed.js';
 import { useEffect, useRef } from "react";
 
-const TypedEffect = () => {
+const TypedEffect = ({stringArry}: {stringArry: string[]}) => {
     const TypedElement = useRef(null);
 
     useEffect(() => {
         if (!TypedElement.current) return;
         const TypedOptions = {
-            strings: [
-                "alert('Hello world!'); ",
-                "I'm Linus Jansson",
-                "I'm a software developer",
-            ],
+            strings: stringArry || [""],
             startDelay: 300,
             typeSpeed: 100,
             backSpeed: 100,

@@ -20,7 +20,8 @@ export default function HeaderComponent() {
         <div className='w-11/12 p-4 mx-auto text-left md:w-1/2 md:pl-24 md:h-screen md:flex md:flex-col md:justify-between md:fixed md:top-0 md:left-0 md:pt-24 md:pb-12'>
 
             <div id='about' className="pt-26">
-                <p className='text-3xl font-bold text-slate-200'><TypedEffect /></p>
+            
+                <p className='text-3xl font-bold text-slate-200'><TypedEffect stringArry={[ "alert('Hello world!'); ", "I'm Linus Jansson", "I'm a software developer"]} /></p>
                 <noscript>
                     <p className='text-3xl font-bold text-slate-200'>Hello! I am Linus Jansson</p>
                 </noscript>
