@@ -11,7 +11,7 @@ function SettingsMenu({ settings, dispatch }
         <div className="flex flex-col p-2 mt-2 bg-gray-800 rounded-lg shadow-lg">
             <label className="text-white" htmlFor="">Perspective</label>
             <input type="number" name=""  className="mb-2" value={settings.perspective} onChange={(e) => dispatch({ type:"perspectiveChange", value: e.target.value })} />
-            <label className="text-white"htmlFor="">Max Rotation</label>
+            <label className="text-white" htmlFor="">Max Rotation</label>
             <input type="number" name="" value={settings.maxRotation} onChange={(e) => dispatch({ type:"maxRotationChange", value: e.target.value })} />
         </div>
     )

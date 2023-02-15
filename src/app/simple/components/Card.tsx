@@ -38,7 +38,7 @@ export default function MainCard() {
         if (!elementRef.current || !wrapperRef.current) return;
 
         /* Could be changable values */
-        const perspective = settings.perspective;
+        let perspective = settings.perspective;
         const maxRotate = settings.maxRotation;
         /* */
         
@@ -55,16 +55,26 @@ export default function MainCard() {
             Calculate rotation degree x&y depending on normalized 
             mouse coords relative to window width, height
         */
-        const offsetX = (mouseX - (windowWidth/2)) / (windowWidth) * maxRotate;
-        const offsetY = (mouseY - (windowHeight/2)) / (windowHeight) * maxRotate;
-        
+
+        const x_norm = (mouseX - (windowWidth/2)) / (windowWidth)
+        const y_norm = (mouseY - (windowHeight/2)) / (windowHeight)
+        const offsetX =  x_norm * maxRotate;
+        const offsetY = y_norm * maxRotate;
+        // perspective = Math.random() * 1000 + 10000;
+
+        let scaleY = Math.max(1, Math.abs(x_norm*4))
+        let scaleX = Math.max(1, Math.abs(y_norm*4))
+
         /* Set style transform */
         elementRef.current.style.transform = `perspective(${perspective}px)  rotateX(${-offsetY}deg) rotateY(${offsetX}deg)`;
+        elementRef.current.style.transition = 'none';
+        // elementRef.current.style.transform = `scaleX(${scaleX}) scaleY(${scaleY}) perspective(${perspective}px)  rotateX(${-offsetY}deg) rotateY(${offsetX}deg)`;
     }
     const handleMouseLeave = () => {
         /* Reset rotation of card if mouse is leaving window */
         if (!elementRef.current) return;
-        elementRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+        elementRef.current.style.transform = 'none';
+        elementRef.current.style.transition = 'transform 0.75s ease';
     }
 
     return (
@@ -77,23 +87,18 @@ export default function MainCard() {
             <SettingsButton settings={settings} dispatch={dispatch} />
             <div 
                 ref={elementRef} 
-                className="w-1/4 h-64 p-4 transition duration-300 bg-gray-800 rounded-lg shadow-2xl"
+                className="w-1/4 p-4 rounded-lg shadow-2xl bg-gray-800/75"
             >   
                 <div className="flex flex-col justify-around h-full">
                     <h1 className="text-3xl font-bold text-white">Title</h1>
-                    <div className="flex flex-row justify-between">
-                        <div className="flex flex-col text-white">
-                            <p>Some content</p>
-                            <p>Some content</p>
-                            <p>Some content</p>
-                            <p>Some content</p>
-                            <p>Some content</p>
-                            <p>Some content</p>
+                    <div className="flex flex-row justify-between w-full">
+                        <div className="flex flex-col w-1/2 text-white">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit voluptatem maxime quo facere mollitia soluta incidunt molestiae hic, vel, ipsum, eos minus sequi veritatis eveniet numquam. Perferendis, necessitatibus aperiam.
                         </div>
                         <div>
                             <Image
-                                height={200}
-                                width={200}
+                                height={175}
+                                width={175}
                                 alt="Picture of computer"
                                 src={"/images/background.jpg"}
                             />
