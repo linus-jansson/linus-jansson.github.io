@@ -92,36 +92,20 @@ export default function MainCard() {
             <SettingsButton settings={settings} dispatch={dispatch} />
             <div 
                 ref={elementRef} 
-                className="w-1/3 p-4 rounded-lg shadow-2xl bg-gray-800/75"
+                className="md:w-1/3 p-4 rounded-lg shadow-2xl bg-gray-800/75"
             >   
                 <div className="flex flex-col justify-around h-full">
                     <h1 className="text-3xl font-bold text-white"><TypedEffect stringArry={[ "ABC", "XYZ", "123"]} /></h1>
                     <div className="flex flex-row justify-between w-full">
-                        <div className="flex flex-col w-1/2 text-white">
+                        <div className="flex flex-col md:w-1/2 text-white">
                             <p className='font-bold text-slate-200 md:py-1'>I'm a {new Date().getFullYear() - 2003}yr old software developer from Sweden!</p>
                             <p className='font-thinner text-zinc-300 md:py-3'>
                                 I started my software development journey back in 2015 by making personal websites for game servers I was playing around with. Software development is in the family so naturally I got a passion for it. I am currently studying at NTI-gymnasiet, a high school which has tech in focus, where I specialize in software development and software design.
                             </p>
                         </div>
-                        <div>
-                            <div>
-                                <Image
-                                    height={175}
-                                    width={175}
-                                    alt="Picture of computer"
-                                    src={"/images/background.jpg"}
-                                />
-                            </div>
-                            <div>
-                                <ul className="text-right text-white">
-                                    <li className="mr-2">link 1</li>
-                                    <li className="mr-2">link 2</li>
-                                    <li className="mr-2">link 3</li>
-                                </ul>
-                            </div>    
-                        </div>
+                        <></>
                     </div>
-                    <ul className="flex mt-2 text-white">
+                    <ul className="flex justify-evenly mt-2 text-white">
                         <Socials link="https://www.github.com/linus-jansson" icon={FaGithub} icontext='Github' />
                         <Socials link="https://www.linkedin.com/in/linus-jansson-94715924a/" icon={FaLinkedin} icontext='LinkedIn' />
                         <Socials link="mailto:contact@limpan.dev" icon={FaEnvelope} icontext='Mail Me' />
