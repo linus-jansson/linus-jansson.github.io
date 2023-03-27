@@ -1107,10 +1107,10 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-typed.js@^2.0.12:
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.12.tgz#246aff074c8e18d32ec27acb7be15094ac0bc0e1"
-  integrity sha512-lyACZh1cu+vpfYY3DG/bvsGLXXbdoDDpWxmqta10IQUdMXisMXOEyl+jos+YT9uBbzK4QaKYBjT3R0kTJO0Slw==
+typed.js@^2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.14.tgz#d9cd42f710bbc882dd9a007573686231c51b1497"
+  integrity sha512-tAgtrZDaz8CZ9dTuon9uglFLlNDVz94IF5yYOVtuTTjIjkZI5gg5BJi6JxE9uAmmoc7wY7w6XI59sjgsR8yA9g==
 
 typescript@4.9.5:
   version "4.9.5"
