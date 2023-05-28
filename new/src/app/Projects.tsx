@@ -39,6 +39,31 @@ export default function Projects() {
                     <PortfolioCard/>
                 </div>
             </section>
+            {/* Will be shown in desktop variant */}
+            <section className='hidden lg:block'>
+                {/* Arrow */}
+                <button 
+                    className={' right-0 absolute inline-flex flex-col'} 
+                    onClick={() => setShowProjects(prev => !prev)}>
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        className={(showProjects) ? 'rotate-180 duration-200' : 'rotate-0 motion-safe:animate-bounceHorizontal duration-200'} width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9.586 4l-6.586 6.586a2 2 0 0 0 0 2.828l6.586 6.586a2 2 0 0 0 2.18 .434l.145 -.068a2 2 0 0 0 1.089 -1.78v-2.586h2a1 1 0 0 0 1 -1v-6l-.007 -.117a1 1 0 0 0 -.993 -.883l-2 -.001v-2.585a2 2 0 0 0 -3.414 -1.414z" stroke-width="0" fill="currentColor" />
+                        <path d="M21 8a1 1 0 0 1 .993 .883l.007 .117v6a1 1 0 0 1 -1.993 .117l-.007 -.117v-6a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+                        <path d="M18 8a1 1 0 0 1 .993 .883l.007 .117v6a1 1 0 0 1 -1.993 .117l-.007 -.117v-6a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+                    </svg>
+                    <span style={{textOrientation: 'upright', writingMode:'sideways-lr'}} className='absolute right-0 font-thin tracking-widest top-10'>projects</span>
+                </button>
+                <h1 className="my-4 text-3xl font-bold tracking-wide text-center"><RubberBand>My Recent Projects</RubberBand></h1>
+                <div className={((!showProjects) ? 'hidden' : 'duration-100 transition-all transform') + ' duration-100 transition-transform translate-y-3.5 grid grid-cols-3 gap-4'}>
+                    <PortfolioCard/>
+                    <PortfolioCard/>
+                    <PortfolioCard/>
+                    <PortfolioCard/>
+                    <PortfolioCard/>
+                    <PortfolioCard/>
+                </div>
+            </section>
         </>
     )
 }

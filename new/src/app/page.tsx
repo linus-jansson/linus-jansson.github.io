@@ -22,15 +22,17 @@ export default function Home() {
                     <li><a href="mailto:contact@limpan.dev" target="_blank" rel="noopener noreferrer">Contact</a></li>
                 </ul>
             </header>
-            <main className='m-4'>
+            <main className='m-4 '>
                 <section>
                     <h1 className="text-3xl font-bold"><RubberBand>Hey I'm Linus</RubberBand>, a {new Date().getFullYear() - 2003} year old guy from Sweden</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae voluptates velit eveniet eius, dolore odit! Dignissimos dolorum dolor quasi et! Quis, ipsa sequi facilis fuga sit accusamus asperiores voluptatem.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae voluptates velit eveniet eius, dolore odit! Dignissimos dolorum dolor quasi et! Quis, ipsa sequi facilis fuga sit accusamus asperiores voluptatem.</p>
                 </section>
                 <Projects/>
+
+                <span className='block font-thin text-center opacity-70'>want to hire me? <a href="mailto:contact@limpan.dev" className='underline'>Hit me up!</a></span>
             </main>
-            <footer className='flex flex-col items-center w-full p-2 bg-slate-500'>
+            <footer className='flex flex-col items-center w-full p-2 mt-auto bg-slate-500'>
                 <ul className="flex w-full p-2 uppercase justify-evenly">
                     <li><a href="http://" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                     <li><a href="http://" target="_blank" rel="noopener noreferrer">Github</a></li>
