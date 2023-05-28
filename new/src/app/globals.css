@@ -28,5 +28,5 @@ body {
         var(--background-start-rgb);
     display: flex;
     flex-direction: column;
-    min-height:100%;
+    min-height:100vh;
 }
