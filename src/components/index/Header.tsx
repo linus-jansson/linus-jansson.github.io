@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaDiscord, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaEnvelope, FaLock } from 'react-icons/fa';
 import Socials from './Socials';
 import TypedEffect from './TypedEffect';
 
@@ -29,6 +29,7 @@ export default function HeaderComponent() {
             <div id='socials' className='flex flex-wrap justify-around pt-6 pb-4 md:justify-start'>
                 <Socials link="https://www.github.com/linus-jansson" icon={FaGithub} icontext='Github' />
                 <Socials link="mailto:contact@limpan.dev" icon={FaEnvelope} icontext='Mail Me' />
+                <Socials link="/pgp" icon={FaLock} icontext='PGP key' />
             </div>
         </div >
     )
