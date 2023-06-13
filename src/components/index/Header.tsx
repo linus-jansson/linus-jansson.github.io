@@ -28,8 +28,6 @@ export default function HeaderComponent() {
 
             <div id='socials' className='flex flex-wrap justify-around pt-6 pb-4 md:justify-start'>
                 <Socials link="https://www.github.com/linus-jansson" icon={FaGithub} icontext='Github' />
-                <Socials link="https://www.linkedin.com/in/linus-jansson-94715924a/" icon={FaLinkedin} icontext='LinkedIn' />
-                <Socials link="https://discord.com/users/322015089529978880" icon={FaDiscord} icontext='Discord' />
                 <Socials link="mailto:contact@limpan.dev" icon={FaEnvelope} icontext='Mail Me' />
             </div>
         </div >
