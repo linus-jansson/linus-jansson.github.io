@@ -1,7 +1,7 @@
 import { FaGithub, FaEnvelope, FaLock } from 'react-icons/fa';
 import Socials from './Socials';
 import TypedEffect from './TypedEffect';
-
+import Link from 'next/link';
 const about = `Been playing around with servers and computers since I was a kid. Playing a lot of games, which turned into a passion for software development. Mostly focusing on fullstack development.`;
 
 export default function HeaderComponent() {
@@ -24,6 +24,7 @@ export default function HeaderComponent() {
             <div id='links' className='hidden md:flex md:flex-col md:w-fit'>
                 <a href="#projects" className='text-lg font-thin tracking-widest uppercase duration-200 text-slate-100 md:hover:underline md:hover:text-rose-600'>My Recent Projects</a>
                 <a href="#timeline" className='text-lg font-thin tracking-widest uppercase duration-200 text-slate-100 md:hover:underline md:hover:text-rose-600'>My Timeline</a>
+                {/* <Link href="/p" className='text-lg font-thin tracking-widest uppercase duration-200 text-slate-100 md:hover:underline md:hover:text-rose-600'>My Thoughts</Link> */}
             </div>
 
 
