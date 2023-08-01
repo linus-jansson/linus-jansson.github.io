@@ -1,6 +1,5 @@
 import Header from '../components/index/Header'
 import PortfolioSection from '../components/index/Portfolio'
-import TimelineSection from '../components/index/Timeline'
 
 export default function IndexPage() {
 
@@ -18,8 +17,6 @@ export default function IndexPage() {
                 <div className='px-4 md:ml-auto md:pr-24 md:pl-48 md:pt-24 mb-12 w-full md:w-1/2 flex flex-col max-w-[1024px] justify-center'>
                     {/* Projects section */}
                     <PortfolioSection />
-                    {/* Timeline section */}
-                    <TimelineSection />
                 </div>
             </div>
 
