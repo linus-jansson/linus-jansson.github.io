@@ -2,6 +2,7 @@ import { FaGithub, FaEnvelope, FaLock } from 'react-icons/fa';
 import Socials from './Socials';
 import TypedEffect from './TypedEffect';
 
+const about = `Been playing around with servers and computers since I was a kid. Playing a lot of games, which that intreset into a passion for software development.`;
 
 export default function HeaderComponent() {
     return (
@@ -9,13 +10,13 @@ export default function HeaderComponent() {
 
             <div id='about' className="pt-26">
             
-                <p className='text-3xl font-bold text-slate-200'><TypedEffect stringArry={[ "alert('Hello world!'); ", "I'm Linus Jansson", "I'm a software developer"]} /></p>
+                <p className='text-3xl font-bold text-slate-200'><TypedEffect stringArry={["I'm Linus J", "(aka Limpan 🥖)", "alert('Hello world!'); "]} /></p>
                 <noscript>
-                    <p className='text-3xl font-bold text-slate-200'>Hello! I am Linus Jansson</p>
+                    <p className='text-3xl font-bold text-slate-200'>Hello! I am Linus aka Limpan</p>
                 </noscript>
-                <p className='font-bold text-slate-200 md:py-1'>I'm a {new Date().getFullYear() - 2003}yr old software developer from Sweden!</p>
+                <p className='font-bold text-slate-200 md:py-1'>I'm a software developer based in Sweden</p>
                 <p className='font-thin text-zinc-400 md:py-3'>
-                    I started my software development journey back in 2015 by making personal websites for game servers I was playing around with. Software development is in the family so naturally I got a passion for it. I am currently studying at NTI-gymnasiet, a high school which has tech in focus, where I specialize in software development and software design.
+                    {about}
                 </p>
                 <p className='font-thin text-zinc-400'>I also work on smaller projects on my spare time which are open-source and avaliable <a href="https://github.com/linus-jansson" className="font-bold underline duration-100 hover:text-rose-600" target='_blank'>here</a>!</p>
             </div>
