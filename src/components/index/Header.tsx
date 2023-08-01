@@ -2,7 +2,7 @@ import { FaGithub, FaEnvelope, FaLock } from 'react-icons/fa';
 import Socials from './Socials';
 import TypedEffect from './TypedEffect';
 
-const about = `Been playing around with servers and computers since I was a kid. Playing a lot of games, which that intreset into a passion for software development.`;
+const about = `Been playing around with servers and computers since I was a kid. Playing a lot of games, which turned into a passion for software development. Mostly focusing on fullstack development.`;
 
 export default function HeaderComponent() {
     return (
