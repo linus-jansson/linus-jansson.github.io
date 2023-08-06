@@ -1,12 +1,12 @@
-import './globals.css'
+import '../globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Hey! I'm Linus!",
-  description: 'Full stack developer from Sweden. Here is my portfolio!',
+  title: 'Limpan Tools',
+  description: 'Tools for Limpan',
 }
 
 export default function RootLayout({
@@ -16,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " overflow-x-hidden bg-zinc-900"}>{children}</body>
+      <body className={inter.className}>
+        <h1 className='text-4xl font-semibold text-center'>Tools</h1>
+        {children}
+      </body>
     </html>
   )
 }
