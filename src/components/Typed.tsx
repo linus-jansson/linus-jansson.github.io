@@ -47,7 +47,7 @@ export function useTyped({ stringArry }: { stringArry: string[] }) {
 
         }
 
-        const typed = new Typed(TypedElement.current, TypedOptions);
+        const typed = new typedJs(TypedElement.current, TypedOptions);
 
         // Destroy typed when unmounted
         return () => typed.destroy();

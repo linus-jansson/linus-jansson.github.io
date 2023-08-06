@@ -150,8 +150,6 @@ export default function MainCard() {
                         <Socials link="mailto:contact@limpan.dev" icon={FaEnvelope} icontext='Mail Me' />
                     </ul>
                 </div>
-
-
             </div>
         </div>
     )
