@@ -22,9 +22,9 @@ export default async function Head() {
             {/* IOS Theme */}
             <meta name="theme-color" content="#18181B"/>
             <meta name="apple-mobile-web-app-capable" content="yes"/>
-            <meta name="apple-mobile-web-app-status-bar-style" content="#18181B" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-            <title>Hey! I&apos;m Linus! </title>
+            <title>Hey! I&apos;m Linus!</title>
         </>
     )
 }
