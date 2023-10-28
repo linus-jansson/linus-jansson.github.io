@@ -1,5 +1,4 @@
 import './globals.css'
-import layout from '@/styling/layout.module.css'
 export default function RootLayout({
     children,
 }: {
@@ -7,7 +6,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={'overflow-x-hidden ' + layout.gradient}>
+            <body className={'overflow-x-hidden'}>
                 {children}
             </body>
         </html>
