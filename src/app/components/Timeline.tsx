@@ -15,7 +15,7 @@ const TimelineSection = () => {
     return (
         <>
             <div id='timeline' className='p-12'>
-                <h1 className='text-3xl font-bold tracking-widest text-center uppercase text-slate-100'>My Timeline</h1>
+                <h1 className='text-3xl font-bold tracking-widest text-center uppercase text-zinc-100'>My Timeline</h1>
                 <div>
                     <TimelineCard title="Software developer at Uppsala Komnun">
                         <p>After my internship at Uppsala Kommun I got a fulltime job as a software developer.</p>

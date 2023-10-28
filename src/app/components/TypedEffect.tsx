@@ -2,11 +2,12 @@
 import Typed from 'typed.js';
 import { useEffect, useRef } from "react";
 
-const TypedEffect = ({stringArry}: {stringArry: string[]}) => {
+const TypedEffect = ({stringArry, fallback}: {stringArry: string[], fallback?: string}) => {
     const TypedElement = useRef(null);
 
     useEffect(() => {
         if (!TypedElement.current) return;
+
         const TypedOptions = {
             strings: stringArry || [""],
             startDelay: 300,
@@ -16,7 +17,6 @@ const TypedEffect = ({stringArry}: {stringArry: string[]}) => {
             contentType: 'null',
             loop: true,
             cursorChar: '_'
-
         }
 
         const typed = new Typed(TypedElement.current, TypedOptions);
@@ -25,7 +25,9 @@ const TypedEffect = ({stringArry}: {stringArry: string[]}) => {
         return () => typed.destroy();
     }, []);
 
-    return <span ref={TypedElement}></span>
+    return (
+        <span ref={TypedElement}><noscript>{fallback}</noscript></span>
+    )
 }
 
 export default TypedEffect;
