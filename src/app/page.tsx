@@ -10,11 +10,11 @@ import {VIconLink, HIconLink} from './components/Links'
 function FloatingNav() {
     
     return (
-        <nav className='sticky bottom-3 z-50 right-0 left-0 py-3 rounded-2xl shadow-2xl md:hidden backdrop-blur-2xl xs:flex-col'>
+        <nav className='sticky bottom-3 z-50 right-0 left-0 py-4 rounded-2xl shadow-2xl md:hidden backdrop-blur-3xl xs:flex-col'>
             <ul className='flex justify-evenly w-full flex-wrap'>
-                <VIconLink href="#start"><CgProfile size="2.5rem"/>About Me</VIconLink>
-                <VIconLink href="#contact"><FaEnvelope size="2.5rem"/>Socials</VIconLink>
-                <VIconLink href="#projects"><BsGit size="2.5rem"/>Projects</VIconLink>
+                <VIconLink href="#start"><CgProfile size="2rem"/></VIconLink>
+                <VIconLink href="#contact"><FaEnvelope size="2rem"/></VIconLink>
+                <VIconLink href="#projects"><BsGit size="2rem"/></VIconLink>
                 {/* <IconLink href="#timeline">Thoughts</IconLink> */}
             </ul>
         </nav>

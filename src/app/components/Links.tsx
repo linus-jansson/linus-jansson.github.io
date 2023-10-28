@@ -1,6 +1,6 @@
 export function VIconLink({href, children}: {href: string, children: React.ReactNode}) {
     return (
-        <li className='text-zinc-100 font-bold tracking-widest uppercase'>
+        <li className='text-zinc-100 text-xs font-bold tracking-widest uppercase'>
             <a href={href}
                 className='duration-100 hover:text-zinc-400 hover:shadow-[0_2px_0_0_currentcolor] items-center flex flex-col'
             >
