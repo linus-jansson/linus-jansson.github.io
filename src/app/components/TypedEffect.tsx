@@ -1,34 +1,31 @@
 "use client";
-// @ts-ignore
-import Typed from 'typed.js';
-import { useEffect, useRef } from "react";
+import Typewriter from 'typewriter-effect';
+import GraphemeSplitter from 'grapheme-splitter';
 
-const TypedEffect = ({stringArry, fallback}: {stringArry: string[], fallback?: string}) => {
-    const TypedElement = useRef(null);
+const stringSplitter = (string: any): string => {
+    const splitter = new GraphemeSplitter();
+    console.log(splitter.splitGraphemes(string))
+    // Orkar inte fixa detta rn
+    // @ts-ignore
+    return splitter.splitGraphemes(string);
+};
+  
 
-    useEffect(() => {
-        if (!TypedElement.current) return;
-
-        const TypedOptions = {
-            strings: stringArry || [""],
-            startDelay: 300,
-            typeSpeed: 100,
-            backSpeed: 100,
-            backDelay: 500,
-            contentType: 'null',
-            loop: true,
-            cursorChar: '_'
-        }
-
-        const typed = new Typed(TypedElement.current, TypedOptions);
-
-        // Destroy typed when unmounted
-        return () => typed.destroy();
-    }, []);
-
+export default function TypedEffect({stringArry, fallback}: {stringArry: string[], fallback?: string})
+{
     return (
-        <span ref={TypedElement}><noscript>{fallback}</noscript></span>
+        <>
+            <Typewriter 
+                options={{
+                    strings: stringArry || [""],
+                    cursor: '_',
+                    delay: 300,
+                    loop: true,
+                    autoStart: true,
+                    stringSplitter,
+                }}
+            />
+            <noscript>{fallback}</noscript>
+        </>
     )
 }
-
-export default TypedEffect;

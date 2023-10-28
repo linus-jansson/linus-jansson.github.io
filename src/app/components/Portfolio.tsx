@@ -1,8 +1,7 @@
 import { FaLink, FaGithub } from 'react-icons/fa'
 import data from '../../data';
 
-import {VIconLink} from './Links'
-
+import {HIconLink} from './Links'
 
 const PortfolioCard = ({ type, title, desc, github, page_link, latest_change }:
     {
@@ -20,12 +19,12 @@ const PortfolioCard = ({ type, title, desc, github, page_link, latest_change }:
             <p className='my-2 text-lg font-thin tracking-widest uppercase text-zinc-200'>{type}</p>
             <p className='mb-4 text-3xl font-bold text-rose-600'>{title}</p>
             <p className='pb-4 text-lg text-zinc-100'>{desc}</p>
-            <ul className='flex flex-row gap-12'>
+            <ul className='flex flex-row gap-6'>
                 {github && 
-                    <VIconLink href={github}><FaGithub size='1.75rem' />Github</VIconLink>
+                    <HIconLink href={github} text="Github"><FaGithub size='1.75rem' /></HIconLink>
                 }
                 {page_link &&
-                    <VIconLink href={page_link}><FaLink size='1.75rem'/>Live</VIconLink>
+                    <HIconLink href={page_link} text="Website"><FaLink size='1.75rem'/></HIconLink>
                 }
             </ul>
         </div>
@@ -50,8 +49,8 @@ const PortfolioSection = () => {
                     )
                 })}
             </div>
-            <p className='text-2xl tracking-widest text-center uppercase text-zinc-100'>
-                <a href='https://github.com/linus-jansson/' target='_blank' className='shadow-[0_1px_0_0_currentcolor] duration-100 hover:cursor-pointer hover:text-zinc-600'>See more</a>
+            <p className='text-lg tracking-widest text-center uppercase text-zinc-100 duration-100'>
+                <a href='https://github.com/linus-jansson/' target='_blank' className='shadow-[0_1px_0_0_currentcolor] hover:cursor-pointer hover:text-zinc-600'>See more</a>
             </p>
         </>
     )
