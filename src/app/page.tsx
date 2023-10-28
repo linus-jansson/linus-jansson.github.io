@@ -5,16 +5,16 @@ import { BsGit } from 'react-icons/bs'
 import { CgProfile } from 'react-icons/cg'
 import { FaGithub, FaEnvelope, FaLock } from 'react-icons/fa';
 
-import {VIconLink, HIconLink} from './components/Links'
+import {FloatingIconLink, HIconLink} from './components/Links'
 
 function FloatingNav() {
     
     return (
         <nav className='sticky bottom-3 z-50 right-0 left-0 py-4 rounded-2xl shadow-2xl md:hidden backdrop-blur-3xl xs:flex-col'>
             <ul className='flex justify-evenly w-full flex-wrap'>
-                <VIconLink href="#start"><CgProfile size="2rem"/></VIconLink>
-                <VIconLink href="#contact"><FaEnvelope size="2rem"/></VIconLink>
-                <VIconLink href="#projects"><BsGit size="2rem"/></VIconLink>
+                <FloatingIconLink href="#start"><CgProfile size="2rem"/></FloatingIconLink>
+                <FloatingIconLink href="#contact"><FaEnvelope size="2rem"/></FloatingIconLink>
+                <FloatingIconLink href="#projects"><BsGit size="2rem"/></FloatingIconLink>
                 {/* <IconLink href="#timeline">Thoughts</IconLink> */}
             </ul>
         </nav>
