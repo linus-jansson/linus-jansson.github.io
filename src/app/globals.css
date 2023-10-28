@@ -6,6 +6,7 @@ html, head, body {
     /* bg-zinc-900 */
     background: rgb(24,24,27);
     background: linear-gradient(24deg, rgba(24,24,27,1) 0%, rgba(28,28,31,1) 95%) fixed;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* :root {

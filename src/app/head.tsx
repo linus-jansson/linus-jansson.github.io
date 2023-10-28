@@ -19,6 +19,11 @@ export default async function Head() {
             <meta name="twitter:description" content="Full stack developer from Sweden. Here is my portfolio!" />
             <meta name="twitter:image" content="https://limpan.dev/images/background.jpg" />
 
+            {/* IOS Theme */}
+            <meta name="theme-color" content="#4285f4"/>
+            <meta name="apple-mobile-web-app-capable" content="yes"/>
+            <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4" />
+
             <title>Hey! I&apos;m Linus! </title>
         </>
     )

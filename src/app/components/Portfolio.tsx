@@ -31,7 +31,7 @@ const PortfolioCard = ({ type, title, desc, github, page_link, latest_change }:
     )
 }
 
-const PortfolioSection = () => {
+export default function PortfolioSection() {
     return (
         <>
             <h1 className='text-4xl font-bold tracking-widest uppercase text-zinc-100'>My Recent Projects</h1>
@@ -55,5 +55,3 @@ const PortfolioSection = () => {
         </>
     )
 }
-
-export default PortfolioSection;
