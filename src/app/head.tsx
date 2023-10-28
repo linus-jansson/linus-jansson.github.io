@@ -20,9 +20,9 @@ export default async function Head() {
             <meta name="twitter:image" content="https://limpan.dev/images/background.jpg" />
 
             {/* IOS Theme */}
-            <meta name="theme-color" content="#4285f4"/>
+            <meta name="theme-color" content="#18181B"/>
             <meta name="apple-mobile-web-app-capable" content="yes"/>
-            <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="#18181B" />
 
             <title>Hey! I&apos;m Linus! </title>
         </>
