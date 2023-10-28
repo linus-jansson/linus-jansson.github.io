@@ -1,4 +1,5 @@
 "use client";
+// @ts-ignore
 import Typed from 'typed.js';
 import { useEffect, useRef } from "react";
 

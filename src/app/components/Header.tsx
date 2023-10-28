@@ -15,7 +15,7 @@ export default function HeaderComponent() {
                         fallback='Hello! I am Linus J (🥖)' 
                     />
                 </h1>
-                <p className='font-bold text-2xl text-zinc-200 py-3'>I'm a software developer based in Sweden</p>
+                <p className='font-bold text-2xl text-zinc-200 py-3'>I&apos;m a software developer based in Sweden</p>
                 <p className='text-lg text-zinc-300 pb-3'>{about}</p>
                 <p className='text-lg text-zinc-300'>I also work on smaller projects on my spare time which are open-source and available <a href="https://github.com/linus-jansson" className="font-bold underline duration-100 hover:text-zinc-600" target='_blank'>here</a>!</p>
             </div>
