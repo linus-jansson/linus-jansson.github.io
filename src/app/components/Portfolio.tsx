@@ -50,8 +50,8 @@ const PortfolioSection = () => {
                     )
                 })}
             </div>
-            <p className='text-2xl font-thin text-center text-zinc-100'>
-                <a href='https://github.com/linus-jansson/' target='_blank' className='underline duration-100 hover:cursor-pointer hover:text-zinc-600'>See more!</a>
+            <p className='text-2xl tracking-widest text-center uppercase text-zinc-100'>
+                <a href='https://github.com/linus-jansson/' target='_blank' className='shadow-[0_1px_0_0_currentcolor] duration-100 hover:cursor-pointer hover:text-zinc-600'>See more</a>
             </p>
         </>
     )
