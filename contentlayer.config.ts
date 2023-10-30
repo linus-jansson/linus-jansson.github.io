@@ -9,8 +9,8 @@ export const Post = defineDocumentType(() => ({
     date: { type: 'date', required: true },
   },
   computedFields: {
-    url: { type: 'string', resolve: (post) => `/${post._raw.flattenedPath}` },
+    url: { type: 'string', resolve: (post) => `posts/${post._raw.sourceFileName}` },
   },
 }))
 
-export default makeSource({ contentDirPath: './data/', documentTypes: [Post] })
+export default makeSource({ contentDirPath: 'data', documentTypes: [Post] })

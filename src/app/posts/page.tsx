@@ -9,7 +9,7 @@ function truncate(str: string, n: number) {
 
 function PostCard(post: Post) {
     return (
-        <div className="mb-8">
+        <div className="mb-8 bg-white">
             <h2 className="mb-1 text-xl">
                 <Link
                     href={post.url}
