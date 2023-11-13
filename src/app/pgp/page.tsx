@@ -18,7 +18,7 @@ export default function Page() {
     return (
         <>
             <pre className="text-white border-2 border-white">{pgp}</pre>
-            <p className="text-white">or download it <a href="/publickey.contact@limpan.dev-702fd288190d394916ce37e01a4e3c6e25e74130.asc" className='underline'>here</a> as a file</p>
+            <p className="text-white">or download it <a href="/publickey.contact+portfolio@limpan.dev-702fd288190d394916ce37e01a4e3c6e25e74130.asc" className='underline'>here</a> as a file</p>
         </>
     )
 }

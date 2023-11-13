@@ -27,7 +27,7 @@ const TimelineSection = () => {
                         <p>I went to NTI-gymnasiet, a high school which has its focus in tech from where I graduated in June 2022.</p>
                     </TimelineCard>
                 </div>
-                <p className='font-thin text-center text-zinc-600'>Want to Hire me? <a href='mailto:contact@limpan.dev' className='underline'>Hit me up!</a></p>
+                <p className='font-thin text-center text-zinc-600'>Want to Hire me? <a href='mailto:contact+portfolio@limpan.dev' className='underline'>Hit me up!</a></p>
             </div>
         </>
     )

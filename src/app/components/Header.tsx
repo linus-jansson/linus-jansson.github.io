@@ -28,7 +28,7 @@ export default function HeaderComponent() {
 
             <ul id='socials' className='md:flex flex-wrap gap-12 pt-6 pb-4 md:justify-start hidden'>
                 <HIconLink href="https://www.github.com/linus-jansson" text='Github' ><FaGithub size="2rem"/></HIconLink>
-                <HIconLink href="mailto:contact@limpan.dev" text='Mail Me' ><FaEnvelope size="2rem"/></HIconLink>
+                <HIconLink href="mailto:contact+portfolio@limpan.dev" text='Mail Me' ><FaEnvelope size="2rem"/></HIconLink>
                 <HIconLink href="/pgp" text='PGP key' ><FaLock size="2rem"/></HIconLink>
             </ul>
         </>

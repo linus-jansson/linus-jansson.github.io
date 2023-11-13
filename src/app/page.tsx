@@ -27,7 +27,7 @@ function Contact() {
             <h2 className='text-4xl font-bold tracking-widest uppercase text-zinc-100'>Get in touch</h2>
             <ul id='socials' className='flex flex-wrap flex-col gap-y-6 pt-6 pb-4 md:justify-start'>
                 <HIconLink href="https://www.github.com/linus-jansson" text='Github' ><FaGithub size="2rem"/></HIconLink>
-                <HIconLink href="mailto:contact@limpan.dev" text='Mail Me' ><FaEnvelope size="2rem"/></HIconLink>
+                <HIconLink href="mailto:contact+portfolio@limpan.dev" text='Mail Me' ><FaEnvelope size="2rem"/></HIconLink>
                 <HIconLink href="/pgp" text='PGP key'><FaLock size="2rem"/></HIconLink>
             </ul>
         </div>
